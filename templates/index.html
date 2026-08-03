@@ -4,14 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hexatrack - L'Ultra des 3 Forêts - Aventure en Autonomie</title>
-    
-    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
-    <!-- Alpine.js (Nécessaire pour les onglets x-data) -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-    <!-- CSS & JS Leaflet + Plugin GPX -->
+    <!-- CSS & JS Leaflet + Plugin GPX pour afficher la trace au zoom -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
@@ -21,14 +16,11 @@
             background: linear-gradient(rgba(15, 23, 42, 0.90), rgba(15, 23, 42, 0.96)), url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1920&q=80');
             background-size: cover; background-position: center;
         }
-        #hexatrack-map {
-            z-index: 10;
-        }
     </style>
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans antialiased">
 
-    <!-- FLASH MESSAGES -->
+    <!-- FLASH MESSAGES (Message de confirmation placé tout en haut de la page) -->
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
         <div class="max-w-6xl mx-auto px-4 pt-4">
@@ -54,7 +46,7 @@
     <header class="bg-trail min-h-[50vh] py-10 px-4 border-b border-slate-800 flex items-center">
         <div class="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             
-            <!-- BLOC LOGO & NOM DU SITE -->
+            <!-- BLOC LOGO & NOM DU SITE (A GAUCHE) -->
             <div class="md:col-span-5 lg:col-span-4 flex flex-col items-center md:items-start shrink-0">
                 <div class="w-48 h-48 md:w-60 md:h-60 drop-shadow-2xl">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450" width="100%" height="100%">
@@ -169,17 +161,11 @@
                     <p class="text-slate-400 text-[11px]">Pour toute question, besoin d'informations ou si les points d'eau ne s'affichent pas sur votre appareil, contactez-moi directement sur Instagram : <a href="https://instagram.com/hexa_track" target="_blank" class="text-emerald-400 font-bold underline hover:text-emerald-300">@hexa_track</a></p>
                 </div>
 
-                <!-- BOUTONS DE TÉLÉCHARGEMENT DIRECT DE FICHIERS GPX -->
+                <!-- BOUTONS DE TÉLÉCHARGEMENT COMPTABILISÉS -->
                 <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2">
-                    <a href="{{ url_for('static', filename='gpx/10K.gpx') }}" download class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">
-                        📥 Télécharger GPX 10 KM
-                    </a>
-                    <a href="{{ url_for('static', filename='gpx/50K.gpx') }}" download class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">
-                        📥 Télécharger GPX 50 KM
-                    </a>
-                    <a href="{{ url_for('static', filename='gpx/100K.gpx') }}" download class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">
-                        📥 Télécharger GPX 100 KM
-                    </a>
+                    <a href="/telecharger/10" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs">📥 Télécharger GPX 10 KM</a>
+                    <a href="/telecharger/50" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs">📥 Télécharger GPX 50 KM</a>
+                    <a href="/telecharger/100" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs">📥 Télécharger GPX 100 KM</a>
                 </div>
             </div>
 
@@ -205,18 +191,18 @@
         </div>
     </section>
 
-    <!-- SECTION CARTE INTERACTIVE LEAFLET -->
+    <!-- SECTION CARTE DE FRANCE INTERACTIVE -->
     <section class="max-w-6xl mx-auto px-4 pt-8">
         <div class="mb-4">
             <h2 class="text-2xl font-black text-slate-100">🗺️ Carte de France des Explorations Hexatrack</h2>
-            <p class="text-slate-400 text-xs mt-1">Le tracé GPX du parcours 100 KM s'affiche dynamiquement sur la carte ci-dessous.</p>
+            <p class="text-slate-400 text-xs mt-1">Zoomez sur l'Oise pour faire apparaître le tracé GPX complet du parcours !</p>
         </div>
         <div id="hexatrack-map" class="w-full h-[450px] rounded-2xl border border-slate-700/80 shadow-2xl overflow-hidden"></div>
     </section>
 
     <main class="max-w-6xl mx-auto px-4 py-8 space-y-12">
 
-        <!-- SYSTEME D'ONGLETS DISTANCES -->
+        <!-- SYSTEME D'ONGLETS DISTANCES (10, 50, 100) -->
         <section x-data="{ tab: '10' }">
             <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-3">
                 <div>
@@ -225,9 +211,9 @@
                 </div>
                 <!-- ONGLETS -->
                 <div class="flex shrink-0 bg-slate-800/80 p-1 rounded-xl border border-slate-700">
-                    <button @click="tab = '10'" :class="tab === '10' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-xs transition-all cursor-pointer">10 KM</button>
-                    <button @click="tab = '50'" :class="tab === '50' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-xs transition-all cursor-pointer">50 KM</button>
-                    <button @click="tab = '100'" :class="tab === '100' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-xs transition-all cursor-pointer">100 KM</button>
+                    <button @click="tab = '10'" :class="tab === '10' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-xs transition-all">10 KM</button>
+                    <button @click="tab = '50'" :class="tab === '50' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-xs transition-all">50 KM</button>
+                    <button @click="tab = '100'" :class="tab === '100' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-xs transition-all">100 KM</button>
                 </div>
             </div>
 
@@ -304,7 +290,7 @@
             {% endfor %}
         </section>
 
-        <!-- GALERIE PHOTOS -->
+        <!-- GALERIE DES PHOTOS CHOISIES MODÉRÉES -->
         <section class="border-t border-slate-800 pt-8 space-y-4">
             <div>
                 <h2 class="text-2xl font-black">✨ Galerie Photos de l'Aventure</h2>
@@ -326,10 +312,10 @@
             </div>
         </section>
 
-        <!-- SECTION CONSEILS & FORMULAIRE -->
+        <!-- SECTION CONSEILS, REMARQUES & FORMULAIRE -->
         <section class="border-t border-slate-800 pt-8 grid grid-cols-1 lg:grid-cols-2 gap-10">
             
-            <!-- AVIS & CONSEILS -->
+            <!-- AVIS, CONSEILS ET REPONSES DE L'ORGANISATEUR -->
             <div class="space-y-4">
                 <h2 class="text-2xl font-black">💧 Points d'Eau, Avis & Retours d'Expérience</h2>
                 <p class="text-slate-400 text-xs mt-1">Les astuces, remarques sur le tracé et conseils partagés par la communauté Hexatrack.</p>
@@ -342,6 +328,7 @@
                         </div>
                         <p class="text-slate-300 italic leading-relaxed">"{{ c.conseil }}"</p>
 
+                        <!-- AFFICHAGE DE LA RÉPONSE ADMINISTRATEUR -->
                         {% if c.reponse_admin and c.reponse_admin.strip() %}
                         <div class="mt-2.5 pt-2 border-t border-slate-700/60 bg-emerald-950/30 -mx-2 px-3 py-2 rounded-lg border-l-2 border-l-emerald-400">
                             <span class="text-[10px] font-bold text-emerald-400 block mb-0.5">💬 Réponse d'Hexatrack :</span>
@@ -394,6 +381,7 @@
                         <input type="url" name="strava" required placeholder="https://www.strava.com/activities/..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-emerald-500">
                     </div>
 
+                    <!-- REFUS PUBLICATION STRAVA -->
                     <div class="flex items-start gap-2.5 pt-1">
                         <input type="checkbox" id="refus_strava" name="refus_strava" class="mt-0.5 rounded border-slate-700 bg-slate-900 text-emerald-500 focus:ring-emerald-500 cursor-pointer">
                         <label for="refus_strava" class="text-slate-300 text-[11px] leading-tight cursor-pointer">
@@ -413,6 +401,7 @@
                         <textarea name="conseil" rows="3" placeholder="Votre ressenti, vos astuces d'eau ou vos idées d'amélioration pour Hexatrack..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-emerald-500 transition-all"></textarea>
                     </div>
 
+                    <!-- REFUS PUBLICATION CONSEIL -->
                     <div class="flex items-start gap-2.5">
                         <input type="checkbox" id="refus_conseil" name="refus_conseil" class="mt-0.5 rounded border-slate-700 bg-slate-900 text-emerald-500 focus:ring-emerald-500 cursor-pointer">
                         <label for="refus_conseil" class="text-slate-300 text-[11px] leading-tight cursor-pointer">
@@ -429,26 +418,27 @@
     </main>
 
     <footer class="text-center py-10 text-slate-600 text-xs font-mono border-t border-slate-800">
-        &copy; Exploration Hexatrack Outdoor Tracks — Free & Autonome
+        &copy; Exploration Hexatrack Outdoor Tracks — Free & Autonome — Édition #1 L'Ultra des 3 Forêts — Fin le 31/12/2026.
     </footer>
 
-    <!-- SCRIPT INITIALISATION DE LA CARTE ET DE LA TRACE GPX (SANS MARQUEURS) -->
+    <!-- SCRIPT DE CARTE INTERACTIVE EN FRANÇAIS AVEC TRACE GPX SANS MARQUEURS AU ZOOM -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Initialisation de la carte Leaflet
-            const map = L.map('hexatrack-map').setView([49.3, 2.7], 9);
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. Initialiser la carte centrée sur la France
+            const map = L.map('hexatrack-map').setView([46.603354, 1.888334], 6);
 
-            // Fonds de carte OpenStreetMap
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            // 2. Charger le fond de carte OpenStreetMap en FRANÇAIS
+            L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+                maxZoom: 19
             }).addTo(map);
 
-            // Chemin dynamique vers votre fichier static/gpx/100K.gpx
-            const gpxUrl = "{{ url_for('static', filename='gpx/100K.gpx') }}";
+            let gpxLayer = null;
 
-            // Chargement du GPX sans aucun marqueur ni icône intermédiaire
-            const gpxLayer = new L.GPX(gpxUrl, {
+            // 3. Charger le tracé GPX (sans aucun marqueur/waypoint le long de la ligne)
+            const gpxUrl = '/static/gpx/100k.gpx'; 
+
+            gpxLayer = new L.GPX(gpxUrl, {
                 async: true,
                 polyline_options: {
                     color: '#ff4500',
@@ -460,17 +450,52 @@
                     startIconUrl: '',
                     endIconUrl: '',
                     shadowUrl: '',
-                    wptIconUrls: {} // Désactive tous les waypoints / marqueurs le long de la trace
+                    wptIconUrls: {} // Supprime tous les marqueurs/points le long de la trace GPX
                 }
             });
 
-            gpxLayer.on('loaded', function(e) {
-                // Ajustement du zoom pour englober tout le tracé
-                map.fitBounds(e.target.getBounds());
+            // 4. Ajouter le marqueur principal (Épingle)
+            const marker = L.marker([49.422596, 2.822983]).addTo(map);
+            
+            const popupContent = `
+                <div style="font-family: sans-serif; color: #0f172a; padding: 4px;">
+                    <strong style="font-size: 14px; color: #059669; display: block; margin-bottom: 2px;">L'Ultra des 3 Forêts</strong>
+                    <span style="font-size: 11px; color: #64748b; font-weight: bold;">📍 Oise (60) — Compiègne ➔ Orry-la-Ville</span>
+                    <p style="font-size: 11px; margin: 6px 0; color: #334155;"><strong>Distances :</strong> 10 KM | 50 KM | 100 KM</p>
+                    <button id="btn-zoom-trace" style="display: inline-block; background-color: #10b981; color: #ffffff; border: none; cursor: pointer; font-size: 11px; font-weight: bold; padding: 6px 12px; border-radius: 8px; margin-top: 4px;">🔍 Voir le tracé GPX</button>
+                </div>
+            `;
+            marker.bindPopup(popupContent);
+
+            // 5. Clic sur le bouton du popup pour zoomer et afficher le tracé
+            marker.on('popupopen', function() {
+                const btn = document.getElementById('btn-zoom-trace');
+                if (btn) {
+                    btn.addEventListener('click', function() {
+                        map.setView([49.25, 2.65], 10);
+                        if (!map.hasLayer(gpxLayer)) {
+                            gpxLayer.addTo(map);
+                        }
+                    });
+                }
             });
 
-            gpxLayer.addTo(map);
+            // 6. GESTION DU ZOOM : Affiche la trace si on zoome (niveau >= 9), la masque si on dézoome (vue France)
+            map.on('zoomend', function() {
+                const currentZoom = map.getZoom();
+                if (currentZoom >= 9) {
+                    if (!map.hasLayer(gpxLayer)) {
+                        gpxLayer.addTo(map);
+                    }
+                } else {
+                    if (map.hasLayer(gpxLayer)) {
+                        map.removeLayer(gpxLayer);
+                    }
+                }
+            });
         });
     </script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 </html>
