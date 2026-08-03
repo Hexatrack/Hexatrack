@@ -16,6 +16,7 @@ GPX_FOLDER = os.path.join('static', 'gpx')
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webp'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+# S'assure que les dossiers existent sur le serveur (Render/Heroku/Local)
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(GPX_FOLDER, exist_ok=True)
 
@@ -28,16 +29,19 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def connexion_google_sheet(onglet_name=None):
-    # Si on est sur Render (lecture via la variable secrète)
+    # Si on est sur Render/Hébergeur (variable d'environnement)
     if "GOOGLE_CREDENTIALS" in os.environ:
         creds_dict = json.loads(os.environ.get("GOOGLE_CREDENTIALS"))
         creds = Credentials.from_service_account_info(creds_dict, scopes=SCOPES)
     else:
-        # Si on est sur ton ordinateur (lecture via le fichier local)
+        # En local sur ton PC
         creds = Credentials.from_service_account_file("credentials.json", scopes=SCOPES)
 
     client = gspread.authorize(creds)
+    
+    # Remplace "Classement_Trail" par le nom de ton document s'il est différent
     spreadsheet = client.open("Classement_Trail")
+    
     if onglet_name:
         try:
             return spreadsheet.worksheet(onglet_name)
@@ -54,19 +58,20 @@ def index():
     conseils_liste = []
 
     try:
-        sheet_validated = connexion_google_sheet() 
+        # Lecture depuis l'onglet MODE_PHOTOS ou l'onglet principal
+        sheet_validated = connexion_google_sheet("MODE_PHOTOS") 
         tous_les_enregistrements = sheet_validated.get_all_records()
 
         for f in tous_les_enregistrements:
             valide_valeur = str(f.get('valide', '')).strip().upper()
             
-            # Récupération du conseil / avis et de la réponse admin éventuelle
+            # Récupération du conseil / avis
             if f.get('conseil') and str(f.get('conseil')).strip():
                 conseils_liste.append({
                     'nom': f.get('nom', 'Anonyme'),
                     'distance': f.get('distance', '-'),
                     'conseil': f.get('conseil'),
-                    'reponse_admin': f.get('reponse_admin', '') # Réponse de l'organisateur
+                    'reponse_admin': f.get('reponse_admin', '')
                 })
 
             if valide_valeur == 'OUI':
@@ -103,7 +108,6 @@ def index():
 
 @app.route('/telecharger/<filename>')
 def telecharger_gpx(filename):
-    # Correspondance entre le fichier demandé et le libellé à écrire dans le Google Sheet
     distance_map = {
         '10K.gpx': '10 KM',
         '50K.gpx': '50 KM',
@@ -115,15 +119,12 @@ def telecharger_gpx(filename):
 
     if filename in distance_map:
         try:
-            # Connexion à l'onglet TELECHARGEMENTS et ajout d'une ligne d'horodatage
             sheet_dl = connexion_google_sheet("TELECHARGEMENTS")
             horodatage = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
             sheet_dl.append_row([horodatage, distance_map[filename]])
-            print(f"✅ Téléchargement consigné dans Google Sheet : {horodatage} | {distance_map[filename]}")
         except Exception as e:
-            print(f"⚠️ Erreur comptage téléchargement: {e}")
+            print(f"Erreur comptage téléchargement: {e}")
 
-        # Envoie le fichier depuis static/gpx/
         return send_from_directory(GPX_FOLDER, filename, as_attachment=True)
 
     return redirect(url_for('index'))
@@ -137,31 +138,53 @@ def soumettre():
     strava = request.form.get('strava', '').strip()
     conseil = request.form.get('conseil', '')
     
+    # Récupération des cases d'accord / refus
     acc_strava = "NON" if request.form.get('refus_strava') else "OUI"
     acc_conseil = "NON" if request.form.get('refus_conseil') else "OUI"
     
     photo_url = ""
 
     if not nom or not telephone or not chrono or not strava:
-        flash("❌ Veuillez remplir tous les champs obligatoires (Nom, Téléphone, Chrono, Lien de l'activité).", "error")
+        flash("❌ Veuillez remplir tous les champs obligatoires.", "error")
         return redirect(url_for('index'))
 
+    # Traitement de l'image
     if 'photo_file' in request.files:
         file = request.files['photo_file']
         if file and file.filename != '' and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            full_filename = f"{nom.replace(' ', '_')}_{filename}"
+            clean_nom = "".join(c for c in nom if c.isalnum() or c in (' ', '_')).rstrip().replace(' ', '_')
+            full_filename = f"{clean_nom}_{filename}"
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], full_filename)
+            
+            # Sauvegarde physique du fichier sur le serveur
             file.save(filepath)
+            
+            # Lien enregistré dans la colonne G (photo_url)
             photo_url = f"/static/uploads/{full_filename}"
 
     try:
         sheet_mode = connexion_google_sheet("MODE_PHOTOS")
-        # Structure : Nom | Téléphone | Distance | Chrono | Strava | Accord Strava | Photo URL | Conseil | Accord Conseil | Validé | Réponse Admin
-        sheet_mode.append_row([nom, telephone, distance, chrono, strava, acc_strava, photo_url, conseil, acc_conseil, "NON", ""])
+        
+        # Ordre exact des colonnes dans ton Google Sheet :
+        # A: nom | B: numéro | C: distance | D: chrono | E: strava | F: accord_photo | G: photo_url | H: conseil | I: accord_conseil | J: valide | K: reponse_admin
+        sheet_mode.append_row([
+            nom, 
+            telephone, 
+            distance, 
+            chrono, 
+            strava, 
+            acc_strava, 
+            photo_url, 
+            conseil, 
+            acc_conseil, 
+            "NON", 
+            ""
+        ])
+        
         flash("⏳ Merci ! Ta performance a été transmise pour validation.", "success")
     except Exception as e:
-        print(f"Erreur lors de l'enregistrement: {e}")
+        print(f"Erreur lors de l'enregistrement Sheet: {e}")
         flash("❌ Une erreur s'est produite lors de la sauvegarde.", "error")
 
     return redirect(url_for('index'))
