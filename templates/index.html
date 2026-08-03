@@ -169,7 +169,7 @@
                     <p class="text-slate-400 text-[11px]">Pour toute question, besoin d'informations ou si les points d'eau ne s'affichent pas sur votre appareil, contactez-moi directement sur Instagram : <a href="https://instagram.com/hexa_track" target="_blank" class="text-emerald-400 font-bold underline hover:text-emerald-300">@hexa_track</a></p>
                 </div>
 
-                <!-- BOUTONS DE TÉLÉCHARGEMENT DIRECT DE FICHIERS GPX MODIFIÉS -->
+                <!-- BOUTONS DE TÉLÉCHARGEMENT DIRECT DE FICHIERS GPX -->
                 <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2">
                     <a href="{{ url_for('static', filename='gpx/10K.gpx') }}" download class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">
                         📥 Télécharger GPX 10 KM
@@ -432,10 +432,10 @@
         &copy; Exploration Hexatrack Outdoor Tracks — Free & Autonome
     </footer>
 
-    <!-- SCRIPT INITIALISATION DE LA CARTE ET DE LA TRACE GPX MODIFIÉ -->
+    <!-- SCRIPT INITIALISATION DE LA CARTE ET DE LA TRACE GPX (SANS MARQUEURS) -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialisation de la carte Leaflet (Centrée par défaut sur l'Oise)
+            // Initialisation de la carte Leaflet
             const map = L.map('hexatrack-map').setView([49.3, 2.7], 9);
 
             // Fonds de carte OpenStreetMap
@@ -447,24 +447,29 @@
             // Chemin dynamique vers votre fichier static/gpx/100K.gpx
             const gpxUrl = "{{ url_for('static', filename='gpx/100K.gpx') }}";
 
-            // Chargement et affichage du GPX
-            new L.GPX(gpxUrl, {
+            // Chargement du GPX sans aucun marqueur ni icône intermédiaire
+            const gpxLayer = new L.GPX(gpxUrl, {
                 async: true,
-                marker_options: {
-                    startIconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
-                    endIconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
-                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/images/marker-shadow.png'
-                },
                 polyline_options: {
-                    color: '#10b981', // Vert émeraude
-                    opacity: 0.85,
+                    color: '#ff4500',
                     weight: 5,
+                    opacity: 0.9,
                     lineCap: 'round'
+                },
+                marker_options: {
+                    startIconUrl: '',
+                    endIconUrl: '',
+                    shadowUrl: '',
+                    wptIconUrls: {} // Désactive tous les waypoints / marqueurs le long de la trace
                 }
-            }).on('loaded', function(e) {
+            });
+
+            gpxLayer.on('loaded', function(e) {
                 // Ajustement du zoom pour englober tout le tracé
                 map.fitBounds(e.target.getBounds());
-            }).addTo(map);
+            });
+
+            gpxLayer.addTo(map);
         });
     </script>
 </body>
