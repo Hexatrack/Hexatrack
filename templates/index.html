@@ -161,11 +161,11 @@
                     <p class="text-slate-400 text-[11px]">Pour toute question, besoin d'informations ou si les points d'eau ne s'affichent pas sur votre appareil, contactez-moi directement sur Instagram : <a href="https://instagram.com/hexa_track" target="_blank" class="text-emerald-400 font-bold underline hover:text-emerald-300">@hexa_track</a></p>
                 </div>
 
-                <!-- BOUTONS DE TÉLÉCHARGEMENT COMPTABILISÉS -->
+                <!-- BOUTONS DE TÉLÉCHARGEMENT COMPTABILISÉS DIRECTS -->
                 <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2">
-                    <a href="/telecharger/10" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs">📥 Télécharger GPX 10 KM</a>
-                    <a href="/telecharger/50" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs">📥 Télécharger GPX 50 KM</a>
-                    <a href="/telecharger/100" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs">📥 Télécharger GPX 100 KM</a>
+                    <a href="{{ url_for('static', filename='gpx/10K.gpx') }}" download class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 10 KM</a>
+                    <a href="{{ url_for('static', filename='gpx/50K.gpx') }}" download class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 50 KM</a>
+                    <a href="{{ url_for('static', filename='gpx/100K.gpx') }}" download class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 100 KM</a>
                 </div>
             </div>
 
@@ -195,7 +195,7 @@
     <section class="max-w-6xl mx-auto px-4 pt-8">
         <div class="mb-4">
             <h2 class="text-2xl font-black text-slate-100">🗺️ Carte de France des Explorations Hexatrack</h2>
-            <p class="text-slate-400 text-xs mt-1">Zoomez sur l'Oise pour faire apparaître le tracé GPX complet du parcours !</p>
+            <p class="text-slate-400 text-xs mt-1">Zoomez sur l'Oise pour faire apparaître le tracé GPX complet en orange !</p>
         </div>
         <div id="hexatrack-map" class="w-full h-[450px] rounded-2xl border border-slate-700/80 shadow-2xl overflow-hidden"></div>
     </section>
@@ -421,7 +421,7 @@
         &copy; Exploration Hexatrack Outdoor Tracks — Free & Autonome — Édition #1 L'Ultra des 3 Forêts — Fin le 31/12/2026.
     </footer>
 
-    <!-- SCRIPT DE CARTE INTERACTIVE EN FRANÇAIS AVEC TRACE GPX SANS MARQUEURS AU ZOOM -->
+    <!-- SCRIPT DE CARTE INTERACTIVE EN FRANÇAIS AVEC TRACE GPX ORANGE SANS MARQUEURS AU ZOOM -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // 1. Initialiser la carte centrée sur la France
@@ -435,13 +435,13 @@
 
             let gpxLayer = null;
 
-            // 3. Charger le tracé GPX (sans aucun marqueur/waypoint le long de la ligne)
-            const gpxUrl = '/static/gpx/100k.gpx'; 
+            // 3. Charger le tracé GPX (en orange, sans aucun marqueur/waypoint le long de la ligne)
+            const gpxUrl = "{{ url_for('static', filename='gpx/100K.gpx') }}"; 
 
             gpxLayer = new L.GPX(gpxUrl, {
                 async: true,
                 polyline_options: {
-                    color: '#ff4500',
+                    color: '#ff4500', // Tracé en orange vif
                     weight: 5,
                     opacity: 0.9,
                     lineCap: 'round'
@@ -467,7 +467,7 @@
             `;
             marker.bindPopup(popupContent);
 
-            // 5. Clic sur le bouton du popup pour zoomer et afficher le tracé
+            // 5. Clic sur le bouton du popup pour zoomer et afficher le tracé orange
             marker.on('popupopen', function() {
                 const btn = document.getElementById('btn-zoom-trace');
                 if (btn) {
