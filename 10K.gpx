@@ -1,0 +1,1816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="https://gpx.studio" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+  <metadata>
+    <name>New file 1</name>
+    <author>
+      <name>gpx.studio</name>
+      <link href="https://gpx.studio"/>
+    </author>
+  </metadata>
+  <wpt lat="49.422596" lon="2.822983">
+    <name>Begin</name>
+    <desc>Auto-generated</desc>
+    <type>Begin</type>
+  </wpt>
+  <wpt lat="49.422005" lon="2.821949">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.421852" lon="2.821919">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.421818" lon="2.821903">
+    <name>Waypoint 1</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.421497" lon="2.822367">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.42116" lon="2.822337">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.420612" lon="2.822911">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.4205" lon="2.822803">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.419792" lon="2.823543">
+    <name>Waypoint 2</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.419655" lon="2.823776">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.42101" lon="2.826649">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.420967" lon="2.826755">
+    <type>Slight_right_turn</type>
+  </wpt>
+  <wpt lat="49.41938" lon="2.828517">
+    <name>Waypoint 3</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.418846" lon="2.829148">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.420155" lon="2.831702">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.42023" lon="2.831616">
+    <name>Waypoint 4</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.420155" lon="2.831702">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.420826" lon="2.83202">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.42121" lon="2.83887">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.421097" lon="2.83892">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.42134" lon="2.840882">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.421535" lon="2.842413">
+    <name>Waypoint 5</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.421547" lon="2.842478">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.421906" lon="2.845472">
+    <type>Slight_right_turn</type>
+  </wpt>
+  <wpt lat="49.42271" lon="2.852372">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.42283" lon="2.85243">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.42032" lon="2.860249">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.4191" lon="2.862768">
+    <name>Waypoint 6</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.413445" lon="2.882228">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.413197" lon="2.8865564">
+    <name>Waypoint 7</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.413788" lon="2.889812">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.41356" lon="2.889573">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.412415" lon="2.890116">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.412365" lon="2.890896">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.409027" lon="2.896354">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.408756" lon="2.898037">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.404892" lon="2.902573">
+    <name>Waypoint 8</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.40258" lon="2.904822">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.401806" lon="2.925004">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.400364" lon="2.926388">
+    <name>Waypoint 9</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.399784" lon="2.929754">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.397118" lon="2.933385">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.39711" lon="2.9331794">
+    <name>Waypoint 10</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.39557" lon="2.935457">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.39567" lon="2.937719">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.390125" lon="2.943981">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.389385" lon="2.945122">
+    <type>Slight_left_turn</type>
+  </wpt>
+  <wpt lat="49.389156" lon="2.945666">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.389202" lon="2.9461">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.388515" lon="2.949612">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.388615" lon="2.94962">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.387917" lon="2.952561">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.387054" lon="2.953026">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.38275" lon="2.9661138">
+    <name>Waypoint 11</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.38116" lon="2.969433">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.37021" lon="2.970484">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.37035" lon="2.97388">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.361603" lon="2.974483">
+    <name>Waypoint 12</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.361095" lon="2.974553">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.360928" lon="2.97346">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.35396" lon="2.983006">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.352898" lon="2.983921">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.351376" lon="2.9817164">
+    <name>Waypoint 13</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.3494" lon="2.978657">
+    <name>Waypoint 14</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.3494" lon="2.977851">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.34703" lon="2.977739">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.347023" lon="2.977821">
+    <name>Waypoint 15</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.346794" lon="2.978975">
+    <name>Waypoint 16</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.34677" lon="2.979033">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.346733" lon="2.9790277">
+    <name>Château de Pierrefonds</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.34483" lon="2.978532">
+    <name>Waypoint 17</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.343616" lon="2.978048">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.342026" lon="2.976414">
+    <name>Waypoint 18</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.34047" lon="2.975612">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.34253" lon="2.972514">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.343052" lon="2.973205">
+    <name>Waypoint 19</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.344143" lon="2.974248">
+    <type>Slight_left_turn</type>
+  </wpt>
+  <wpt lat="49.345135" lon="2.9717414">
+    <name>Waypoint 20</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.34474" lon="2.968956">
+    <name>Waypoint 21</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.345005" lon="2.968669">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.344593" lon="2.967362">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.344986" lon="2.962623">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.346516" lon="2.963556">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.348427" lon="2.962173">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.346767" lon="2.957386">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.348232" lon="2.956887">
+    <name>Waypoint 22</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.351337" lon="2.955798">
+    <name>Waypoint 23</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.352154" lon="2.955518">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.350796" lon="2.951573">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.35161" lon="2.949257">
+    <name>Waypoint 24</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.3517" lon="2.948932">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.34967" lon="2.947252">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.348812" lon="2.946619">
+    <name>Waypoint 25</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.34745" lon="2.94547">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.34771" lon="2.945483">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.348038" lon="2.9451883">
+    <name>Waypoint 26</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.34836" lon="2.944404">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.350513" lon="2.943639">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.350357" lon="2.943497">
+    <name>Waypoint 27</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.350513" lon="2.943639">
+    <type>Slight_left_turn</type>
+  </wpt>
+  <wpt lat="49.354305" lon="2.94226">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.353657" lon="2.939885">
+    <type>Slight_left_turn</type>
+  </wpt>
+  <wpt lat="49.35208" lon="2.93751">
+    <name>Waypoint 28</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.350376" lon="2.935229">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.349327" lon="2.931415">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.346317" lon="2.930671">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.346287" lon="2.926313">
+    <name>Waypoint 29</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.34408" lon="2.925257">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.34408" lon="2.925294">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.343952" lon="2.925353">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.34392" lon="2.925157">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.34509" lon="2.920524">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.346893" lon="2.916391">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.345802" lon="2.91187">
+    <type>Slight_left_turn</type>
+  </wpt>
+  <wpt lat="49.345406" lon="2.91029">
+    <name>Waypoint 30</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.346237" lon="2.907104">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.34603" lon="2.9063">
+    <name>Waypoint 31</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.34593" lon="2.905903">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.34643" lon="2.9055915">
+    <name>Village de Saint Jean aux Bois</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.34715" lon="2.90516">
+    <name>Waypoint 32</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.34722" lon="2.904442">
+    <name>Waypoint 33</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.347565" lon="2.904485">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.347717" lon="2.904131">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.34487" lon="2.898977">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.347404" lon="2.894701">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.346382" lon="2.891399">
+    <name>Waypoint 34</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.344284" lon="2.87869">
+    <type>Slight_left_turn</type>
+  </wpt>
+  <wpt lat="49.344276" lon="2.878677">
+    <type>Slight_right_turn</type>
+  </wpt>
+  <wpt lat="49.341614" lon="2.868343">
+    <name>Waypoint 35</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.338974" lon="2.858621">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.332745" lon="2.854815">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.329254" lon="2.842038">
+    <name>Waypoint 36</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.32807" lon="2.837618">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.322838" lon="2.828527">
+    <type>Slight_right_turn</type>
+  </wpt>
+  <wpt lat="49.32212" lon="2.825144">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.321915" lon="2.8250937">
+    <name>Waypoint 37</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.32212" lon="2.825144">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.319073" lon="2.816114">
+    <type>Slight_left_turn</type>
+  </wpt>
+  <wpt lat="49.313934" lon="2.810824">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.31397" lon="2.810756">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.312424" lon="2.809148">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.310867" lon="2.8077335">
+    <name>Waypoint 38</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.30774" lon="2.804903">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.306114" lon="2.806879">
+    <type>Slight_right_turn</type>
+  </wpt>
+  <wpt lat="49.30508" lon="2.807811">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.304844" lon="2.810084">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.304382" lon="2.809778">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.304108" lon="2.8110297">
+    <name>Point d&apos;eau</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.30415" lon="2.8110862">
+    <name>Waypoint 39</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.30364" lon="2.809177">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.30309" lon="2.806134">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.301327" lon="2.805982">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.30116" lon="2.802989">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.30127" lon="2.802963">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.300285" lon="2.800673">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.2991" lon="2.801048">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.298206" lon="2.7991045">
+    <name>Carrefour Market</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.297264" lon="2.795161">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.297817" lon="2.7933877">
+    <name>Waypoint 40</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.297886" lon="2.791489">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.297844" lon="2.791486">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.2964" lon="2.766857">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.29774" lon="2.766317">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.298203" lon="2.760886">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.29862" lon="2.759207">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.29815" lon="2.7556362">
+    <name>Waypoint 41</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.298183" lon="2.7467482">
+    <name>Waypoint 42</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.29826" lon="2.745971">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.299713" lon="2.744894">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.29789" lon="2.735996">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.299355" lon="2.720154">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.300083" lon="2.719599">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.30201" lon="2.708603">
+    <name>Waypoint 43</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.297646" lon="2.702737">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.298103" lon="2.700954">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.297894" lon="2.701388">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.297043" lon="2.698553">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.295574" lon="2.698892">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.29706" lon="2.692171">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.29753" lon="2.691141">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.29703" lon="2.690926">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.290405" lon="2.688417">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.290012" lon="2.683841">
+    <name>point d&apos;eau : cimetière Roberval</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.289978" lon="2.6836662">
+    <name>Waypoint 44</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.28787" lon="2.678224">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.288692" lon="2.670352">
+    <type>Slight_right_turn</type>
+  </wpt>
+  <wpt lat="49.288624" lon="2.661665">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.28891" lon="2.659688">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.29161" lon="2.629416">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.2959" lon="2.626508">
+    <name>Waypoint 45</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.29788" lon="2.626146">
+    <type>Slight_left_turn</type>
+  </wpt>
+  <wpt lat="49.298443" lon="2.624713">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.29972" lon="2.621127">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.29639" lon="2.618183">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.29665" lon="2.615072">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.296604" lon="2.615085">
+    <name>sortie de secours : gare de pont saint Maxence pas trop loin</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.2966" lon="2.6150749">
+    <name>sortie de secours : gare de pont saint Maxence pas trop loin</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.292255" lon="2.618053">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.291397" lon="2.615237">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.288933" lon="2.61632">
+    <name>Waypoint 46</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.285088" lon="2.619744">
+    <type>Slight_left_turn</type>
+  </wpt>
+  <wpt lat="49.28446" lon="2.621324">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.279613" lon="2.611162">
+    <name>Waypoint 47</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.277504" lon="2.606917">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.278145" lon="2.587932">
+    <name>Waypoint 48</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.278614" lon="2.585455">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.289227" lon="2.5846784">
+    <name>Waypoint 49</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.28965" lon="2.584631">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.286785" lon="2.572174">
+    <name>Waypoint 50</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.286743" lon="2.572113">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.284733" lon="2.563425">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.28087" lon="2.557529">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.275345" lon="2.558031">
+    <name>Waypoint 51</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.27345" lon="2.558581">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.272617" lon="2.561662">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.269417" lon="2.573054">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.264267" lon="2.566067">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.250195" lon="2.57194">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.241375" lon="2.566832">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.238613" lon="2.556054">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.238407" lon="2.553353">
+    <name>Waypoint 52</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.238358" lon="2.552829">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.234226" lon="2.549732">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.23414" lon="2.5488">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.23263" lon="2.547791">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.230602" lon="2.546193">
+    <type>Slight_right_turn</type>
+  </wpt>
+  <wpt lat="49.230453" lon="2.545996">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.229603" lon="2.548237">
+    <name>Waypoint 53</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.229565" lon="2.5484235">
+    <name>point d&apos;eau : cimetière Aumont</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.229424" lon="2.549204">
+    <name>Waypoint 54</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.22934" lon="2.550245">
+    <type>Roundabout_exit_1_turn</type>
+  </wpt>
+  <wpt lat="49.226437" lon="2.551393">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.21974" lon="2.561751">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.224064" lon="2.575439">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.22007" lon="2.577715">
+    <name>Waypoint 55</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.21949" lon="2.578028">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.21084" lon="2.581545">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.21082" lon="2.581513">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.209827" lon="2.579994">
+    <name>Waypoint 56</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.20948" lon="2.579486">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.20947" lon="2.579528">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.206562" lon="2.578323">
+    <type>Roundabout_exit_2_turn</type>
+  </wpt>
+  <wpt lat="49.206314" lon="2.578376">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.20547" lon="2.5775578">
+    <name>Arènes de Senlis</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.20516" lon="2.575929">
+    <name>Waypoint 57</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.206455" lon="2.578611">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.206093" lon="2.57991">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.206112" lon="2.579922">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.20595" lon="2.580492">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.20642" lon="2.580842">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.206303" lon="2.582542">
+    <name>Waypoint 58</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.205994" lon="2.584142">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.207073" lon="2.585178">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.207066" lon="2.5852">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.207085" lon="2.585212">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.207077" lon="2.585232">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.207417" lon="2.585354">
+    <name>Waypoint 59</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.2078" lon="2.585563">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.207703" lon="2.586004">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.207233" lon="2.586373">
+    <name>Cathédrale de Senis</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.206985" lon="2.586707">
+    <name>Waypoint 60</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.2063" lon="2.587132">
+    <type>Slight_right_turn</type>
+  </wpt>
+  <wpt lat="49.206017" lon="2.587034">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.20491" lon="2.590714">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.204414" lon="2.590758">
+    <name>Sortie de secours : bus pour rejoindre les gares</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.20297" lon="2.590973">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.202847" lon="2.590591">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.201385" lon="2.591033">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.19849" lon="2.59327">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.191135" lon="2.590451">
+    <name>Waypoint 61</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.188744" lon="2.590023">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.19153" lon="2.574479">
+    <type>Roundabout_exit_2_turn</type>
+  </wpt>
+  <wpt lat="49.191525" lon="2.566182">
+    <name>Waypoint 62</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.19173" lon="2.561016">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.192093" lon="2.559899">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.19287" lon="2.557484">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.190907" lon="2.546993">
+    <type>Slight_left_turn</type>
+  </wpt>
+  <wpt lat="49.191147" lon="2.5317314">
+    <name>Waypoint 63</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.19066" lon="2.512395">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.190712" lon="2.512433">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.191967" lon="2.50752">
+    <type>Roundabout_exit_1_turn</type>
+  </wpt>
+  <wpt lat="49.192093" lon="2.506809">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.191303" lon="2.505088">
+    <name>Waypoint 64</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.189835" lon="2.488718">
+    <name>Waypoint 65</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.19146" lon="2.485158">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.19176" lon="2.484616">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.1919" lon="2.4843993">
+    <name>Château de Chantilly</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.19299" lon="2.482284">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.193134" lon="2.481929">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.193733" lon="2.480488">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.19347" lon="2.480354">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.193455" lon="2.480006">
+    <name>Waypoint 66</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.193413" lon="2.477636">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.193447" lon="2.477632">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.19336" lon="2.473871">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.19041" lon="2.466377">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.1901" lon="2.46539">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.190136" lon="2.465295">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.189774" lon="2.46316">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.1881" lon="2.462091">
+    <name>Waypoint 67</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.187115" lon="2.4614756">
+    <name>sortie de secours : Gare de Chantilly</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.18651" lon="2.461145">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.18606" lon="2.461225">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.18599" lon="2.462341">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.183865" lon="2.469494">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.1773" lon="2.470717">
+    <name>Waypoint 68</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.168545" lon="2.471906">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.16336" lon="2.480898">
+    <name>Waypoint 69</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.162605" lon="2.482204">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.157516" lon="2.481172">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.157238" lon="2.481859">
+    <type>Slight_left_turn</type>
+  </wpt>
+  <wpt lat="49.157646" lon="2.4828238">
+    <name>Waypoint 70</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.15891" lon="2.484794">
+    <name>Étangs de Comelles</name>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.159157" lon="2.487247">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.15919" lon="2.487365">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.15836" lon="2.4888546">
+    <name>Waypoint 71</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.158005" lon="2.4917576">
+    <name>Waypoint 72</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.158302" lon="2.495265">
+    <type>Right_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.15818" lon="2.5005746">
+    <name>Waypoint 73</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.15807" lon="2.501344">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.158" lon="2.501272">
+    <type>Left_at_fork_turn</type>
+  </wpt>
+  <wpt lat="49.156837" lon="2.500241">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.156887" lon="2.5001585">
+    <name>Waypoint 74</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.156834" lon="2.49664">
+    <name>Waypoint 75</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.15613" lon="2.490368">
+    <name>Waypoint 76</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.157375" lon="2.486037">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.156384" lon="2.484416">
+    <name>Waypoint 77</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.155163" lon="2.479468">
+    <name>Waypoint 78</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.155216" lon="2.479635">
+    <type>Sharp_right_turn</type>
+  </wpt>
+  <wpt lat="49.1536" lon="2.479838">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.15348" lon="2.479601">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.152695" lon="2.480741">
+    <name>Waypoint 79</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.148647" lon="2.486616">
+    <type>Slight_left_turn</type>
+  </wpt>
+  <wpt lat="49.14724" lon="2.491782">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.142082" lon="2.487133">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.140194" lon="2.489144">
+    <name>Waypoint 80</name>
+    <desc>Auto-generated</desc>
+    <type>Waypoint</type>
+  </wpt>
+  <wpt lat="49.13973" lon="2.489496">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.139484" lon="2.488777">
+    <type>Left_turn</type>
+  </wpt>
+  <wpt lat="49.138893" lon="2.488971">
+    <type>Right_turn</type>
+  </wpt>
+  <wpt lat="49.138767" lon="2.488632">
+    <type>Sharp_left_turn</type>
+  </wpt>
+  <wpt lat="49.137897" lon="2.489428">
+    <name>End</name>
+    <desc>Auto-generated</desc>
+    <type>End</type>
+  </wpt>
+  <trk>
+    <name>New file 1</name>
+    <trkseg>
+      <trkpt lat="49.18606" lon="2.461225">
+        <ele>58</ele>
+      </trkpt>
+      <trkpt lat="49.18599" lon="2.462341">
+        <ele>58</ele>
+      </trkpt>
+      <trkpt lat="49.185345" lon="2.46329">
+        <ele>58.67</ele>
+      </trkpt>
+      <trkpt lat="49.18471" lon="2.466008">
+        <ele>59</ele>
+      </trkpt>
+      <trkpt lat="49.183865" lon="2.469494">
+        <ele>58</ele>
+      </trkpt>
+      <trkpt lat="49.18114" lon="2.47018">
+        <ele>58.63</ele>
+      </trkpt>
+      <trkpt lat="49.1773" lon="2.470717">
+        <ele>62.63</ele>
+      </trkpt>
+      <trkpt lat="49.1773" lon="2.470717">
+        <ele>62.63</ele>
+      </trkpt>
+      <trkpt lat="49.175976" lon="2.470902">
+        <ele>64</ele>
+      </trkpt>
+      <trkpt lat="49.17496" lon="2.471103">
+        <ele>65</ele>
+      </trkpt>
+      <trkpt lat="49.16901" lon="2.471891">
+        <ele>67</ele>
+      </trkpt>
+      <trkpt lat="49.168545" lon="2.471906">
+        <ele>68</ele>
+      </trkpt>
+      <trkpt lat="49.16611" lon="2.476229">
+        <ele>68</ele>
+      </trkpt>
+      <trkpt lat="49.1655" lon="2.477209">
+        <ele>69</ele>
+      </trkpt>
+      <trkpt lat="49.16336" lon="2.480898">
+        <ele>65.88</ele>
+      </trkpt>
+      <trkpt lat="49.16336" lon="2.480898">
+        <ele>65.88</ele>
+      </trkpt>
+      <trkpt lat="49.162605" lon="2.482204">
+        <ele>64.78</ele>
+      </trkpt>
+      <trkpt lat="49.161953" lon="2.482087">
+        <ele>64</ele>
+      </trkpt>
+      <trkpt lat="49.15833" lon="2.48135">
+        <ele>65.76</ele>
+      </trkpt>
+      <trkpt lat="49.157654" lon="2.481239">
+        <ele>61.62</ele>
+      </trkpt>
+      <trkpt lat="49.157516" lon="2.481172">
+        <ele>60.59</ele>
+      </trkpt>
+      <trkpt lat="49.157433" lon="2.481254">
+        <ele>59.52</ele>
+      </trkpt>
+      <trkpt lat="49.157375" lon="2.481404">
+        <ele>58.13</ele>
+      </trkpt>
+      <trkpt lat="49.157368" lon="2.481522">
+        <ele>56.99</ele>
+      </trkpt>
+      <trkpt lat="49.157238" lon="2.481859">
+        <ele>52.84</ele>
+      </trkpt>
+      <trkpt lat="49.15726" lon="2.482063">
+        <ele>52.46</ele>
+      </trkpt>
+      <trkpt lat="49.157303" lon="2.482245">
+        <ele>52.98</ele>
+      </trkpt>
+      <trkpt lat="49.15749" lon="2.482529">
+        <ele>54.11</ele>
+      </trkpt>
+      <trkpt lat="49.157642" lon="2.482628">
+        <ele>54.21</ele>
+      </trkpt>
+      <trkpt lat="49.157692" lon="2.482792">
+        <ele>54.38</ele>
+      </trkpt>
+      <trkpt lat="49.157646" lon="2.4828238">
+        <ele>54.38</ele>
+      </trkpt>
+      <trkpt lat="49.157692" lon="2.482792">
+        <ele>54.38</ele>
+      </trkpt>
+      <trkpt lat="49.15772" lon="2.482879">
+        <ele>54.47</ele>
+      </trkpt>
+      <trkpt lat="49.158367" lon="2.483609">
+        <ele>54.29</ele>
+      </trkpt>
+      <trkpt lat="49.158577" lon="2.483801">
+        <ele>54.1</ele>
+      </trkpt>
+      <trkpt lat="49.158672" lon="2.483962">
+        <ele>53.95</ele>
+      </trkpt>
+      <trkpt lat="49.158897" lon="2.484716">
+        <ele>53.44</ele>
+      </trkpt>
+      <trkpt lat="49.15891" lon="2.484794">
+        <ele>53.472473</ele>
+      </trkpt>
+      <trkpt lat="49.159126" lon="2.485987">
+        <ele>53.97</ele>
+      </trkpt>
+      <trkpt lat="49.15913" lon="2.486487">
+        <ele>53.7</ele>
+      </trkpt>
+      <trkpt lat="49.159153" lon="2.486549">
+        <ele>53.64</ele>
+      </trkpt>
+      <trkpt lat="49.159225" lon="2.486463">
+        <ele>53.54</ele>
+      </trkpt>
+      <trkpt lat="49.159256" lon="2.486481">
+        <ele>53.48</ele>
+      </trkpt>
+      <trkpt lat="49.15928" lon="2.486583">
+        <ele>53.29</ele>
+      </trkpt>
+      <trkpt lat="49.159252" lon="2.486813">
+        <ele>53.09</ele>
+      </trkpt>
+      <trkpt lat="49.159283" lon="2.487043">
+        <ele>51.97</ele>
+      </trkpt>
+      <trkpt lat="49.159157" lon="2.487247">
+        <ele>52</ele>
+      </trkpt>
+      <trkpt lat="49.15919" lon="2.487365">
+        <ele>53.57</ele>
+      </trkpt>
+      <trkpt lat="49.159016" lon="2.487605">
+        <ele>54.51</ele>
+      </trkpt>
+      <trkpt lat="49.15889" lon="2.48781">
+        <ele>54.93</ele>
+      </trkpt>
+      <trkpt lat="49.158825" lon="2.487968">
+        <ele>55.04</ele>
+      </trkpt>
+      <trkpt lat="49.15879" lon="2.488204">
+        <ele>55.18</ele>
+      </trkpt>
+      <trkpt lat="49.15868" lon="2.488454">
+        <ele>55.47</ele>
+      </trkpt>
+      <trkpt lat="49.158516" lon="2.488554">
+        <ele>55.59</ele>
+      </trkpt>
+      <trkpt lat="49.15847" lon="2.488691">
+        <ele>55.56</ele>
+      </trkpt>
+      <trkpt lat="49.15843" lon="2.488888">
+        <ele>56.01</ele>
+      </trkpt>
+      <trkpt lat="49.15836" lon="2.4888546">
+        <ele>56.01</ele>
+      </trkpt>
+      <trkpt lat="49.15843" lon="2.488888">
+        <ele>56.01</ele>
+      </trkpt>
+      <trkpt lat="49.158367" lon="2.489051">
+        <ele>56.45</ele>
+      </trkpt>
+      <trkpt lat="49.15817" lon="2.489167">
+        <ele>55</ele>
+      </trkpt>
+      <trkpt lat="49.158047" lon="2.489178">
+        <ele>54.78</ele>
+      </trkpt>
+      <trkpt lat="49.157963" lon="2.489294">
+        <ele>55.04</ele>
+      </trkpt>
+      <trkpt lat="49.157875" lon="2.48965">
+        <ele>55.26</ele>
+      </trkpt>
+      <trkpt lat="49.157837" lon="2.489901">
+        <ele>55.19</ele>
+      </trkpt>
+      <trkpt lat="49.157837" lon="2.490127">
+        <ele>55.37</ele>
+      </trkpt>
+      <trkpt lat="49.157787" lon="2.490613">
+        <ele>56.13</ele>
+      </trkpt>
+      <trkpt lat="49.157833" lon="2.490857">
+        <ele>56.25</ele>
+      </trkpt>
+      <trkpt lat="49.157955" lon="2.491227">
+        <ele>56.11</ele>
+      </trkpt>
+      <trkpt lat="49.158016" lon="2.491508">
+        <ele>55.92</ele>
+      </trkpt>
+      <trkpt lat="49.15801" lon="2.491758">
+        <ele>55.88</ele>
+      </trkpt>
+      <trkpt lat="49.158005" lon="2.4917576">
+        <ele>55.88</ele>
+      </trkpt>
+      <trkpt lat="49.15801" lon="2.491758">
+        <ele>55.88</ele>
+      </trkpt>
+      <trkpt lat="49.158005" lon="2.491981">
+        <ele>55.85</ele>
+      </trkpt>
+      <trkpt lat="49.158077" lon="2.492471">
+        <ele>55.41</ele>
+      </trkpt>
+      <trkpt lat="49.158215" lon="2.492858">
+        <ele>54.89</ele>
+      </trkpt>
+      <trkpt lat="49.158264" lon="2.493269">
+        <ele>54.8</ele>
+      </trkpt>
+      <trkpt lat="49.158264" lon="2.493626">
+        <ele>54.81</ele>
+      </trkpt>
+      <trkpt lat="49.158337" lon="2.494023">
+        <ele>54.57</ele>
+      </trkpt>
+      <trkpt lat="49.15833" lon="2.494805">
+        <ele>54.06</ele>
+      </trkpt>
+      <trkpt lat="49.158302" lon="2.495265">
+        <ele>53.26</ele>
+      </trkpt>
+      <trkpt lat="49.158253" lon="2.495846">
+        <ele>54.13</ele>
+      </trkpt>
+      <trkpt lat="49.158222" lon="2.496229">
+        <ele>54.91</ele>
+      </trkpt>
+      <trkpt lat="49.158222" lon="2.496551">
+        <ele>55.57</ele>
+      </trkpt>
+      <trkpt lat="49.15826" lon="2.496802">
+        <ele>56.02</ele>
+      </trkpt>
+      <trkpt lat="49.158333" lon="2.497155">
+        <ele>56.45</ele>
+      </trkpt>
+      <trkpt lat="49.158344" lon="2.497412">
+        <ele>56.89</ele>
+      </trkpt>
+      <trkpt lat="49.158325" lon="2.497765">
+        <ele>56.98</ele>
+      </trkpt>
+      <trkpt lat="49.158195" lon="2.498444">
+        <ele>54.73</ele>
+      </trkpt>
+      <trkpt lat="49.158245" lon="2.498701">
+        <ele>54.21</ele>
+      </trkpt>
+      <trkpt lat="49.158176" lon="2.499242">
+        <ele>53.66</ele>
+      </trkpt>
+      <trkpt lat="49.158146" lon="2.499578">
+        <ele>53.36</ele>
+      </trkpt>
+      <trkpt lat="49.158207" lon="2.500058">
+        <ele>52.82</ele>
+      </trkpt>
+      <trkpt lat="49.158234" lon="2.500483">
+        <ele>52.24</ele>
+      </trkpt>
+      <trkpt lat="49.15822" lon="2.500587">
+        <ele>52.04</ele>
+      </trkpt>
+      <trkpt lat="49.15818" lon="2.5005746">
+        <ele>52.04</ele>
+      </trkpt>
+      <trkpt lat="49.15822" lon="2.500587">
+        <ele>52.04</ele>
+      </trkpt>
+      <trkpt lat="49.15819" lon="2.500805">
+        <ele>51.64</ele>
+      </trkpt>
+      <trkpt lat="49.15819" lon="2.501062">
+        <ele>50.83</ele>
+      </trkpt>
+      <trkpt lat="49.15807" lon="2.501344">
+        <ele>48.72</ele>
+      </trkpt>
+      <trkpt lat="49.158" lon="2.501272">
+        <ele>48.1</ele>
+      </trkpt>
+      <trkpt lat="49.156837" lon="2.500241">
+        <ele>48.21</ele>
+      </trkpt>
+      <trkpt lat="49.156853" lon="2.500146">
+        <ele>48.03</ele>
+      </trkpt>
+      <trkpt lat="49.156887" lon="2.5001585">
+        <ele>48.03</ele>
+      </trkpt>
+      <trkpt lat="49.156853" lon="2.500146">
+        <ele>48.03</ele>
+      </trkpt>
+      <trkpt lat="49.15704" lon="2.498916">
+        <ele>45.66</ele>
+      </trkpt>
+      <trkpt lat="49.157093" lon="2.498311">
+        <ele>45.58</ele>
+      </trkpt>
+      <trkpt lat="49.157085" lon="2.497994">
+        <ele>45.6</ele>
+      </trkpt>
+      <trkpt lat="49.157047" lon="2.497448">
+        <ele>45.66</ele>
+      </trkpt>
+      <trkpt lat="49.156834" lon="2.49664">
+        <ele>45.74</ele>
+      </trkpt>
+      <trkpt lat="49.156834" lon="2.49664">
+        <ele>45.74</ele>
+      </trkpt>
+      <trkpt lat="49.156773" lon="2.496412">
+        <ele>45.77</ele>
+      </trkpt>
+      <trkpt lat="49.156628" lon="2.49521">
+        <ele>46.38</ele>
+      </trkpt>
+      <trkpt lat="49.156612" lon="2.494913">
+        <ele>46.23</ele>
+      </trkpt>
+      <trkpt lat="49.156616" lon="2.494662">
+        <ele>46.56</ele>
+      </trkpt>
+      <trkpt lat="49.15663" lon="2.493873">
+        <ele>45.58</ele>
+      </trkpt>
+      <trkpt lat="49.156666" lon="2.493352">
+        <ele>45.03</ele>
+      </trkpt>
+      <trkpt lat="49.156666" lon="2.492915">
+        <ele>44.68</ele>
+      </trkpt>
+      <trkpt lat="49.156597" lon="2.492364">
+        <ele>44.46</ele>
+      </trkpt>
+      <trkpt lat="49.1564" lon="2.491673">
+        <ele>44.56</ele>
+      </trkpt>
+      <trkpt lat="49.156136" lon="2.490991">
+        <ele>44.88</ele>
+      </trkpt>
+      <trkpt lat="49.15613" lon="2.490368">
+        <ele>45.25</ele>
+      </trkpt>
+      <trkpt lat="49.15613" lon="2.490368">
+        <ele>45.25</ele>
+      </trkpt>
+      <trkpt lat="49.156124" lon="2.489861">
+        <ele>45.56</ele>
+      </trkpt>
+      <trkpt lat="49.156208" lon="2.489162">
+        <ele>45.76</ele>
+      </trkpt>
+      <trkpt lat="49.15634" lon="2.488561">
+        <ele>45.5</ele>
+      </trkpt>
+      <trkpt lat="49.15704" lon="2.487293">
+        <ele>44.45</ele>
+      </trkpt>
+      <trkpt lat="49.15719" lon="2.486935">
+        <ele>44.42</ele>
+      </trkpt>
+      <trkpt lat="49.157375" lon="2.486037">
+        <ele>44.79</ele>
+      </trkpt>
+      <trkpt lat="49.157104" lon="2.485296">
+        <ele>44.91</ele>
+      </trkpt>
+      <trkpt lat="49.156464" lon="2.484529">
+        <ele>45.58</ele>
+      </trkpt>
+      <trkpt lat="49.156384" lon="2.484416">
+        <ele>45.6</ele>
+      </trkpt>
+      <trkpt lat="49.156384" lon="2.484416">
+        <ele>45.6</ele>
+      </trkpt>
+      <trkpt lat="49.15589" lon="2.483715">
+        <ele>45.74</ele>
+      </trkpt>
+      <trkpt lat="49.155598" lon="2.482978">
+        <ele>46.21</ele>
+      </trkpt>
+      <trkpt lat="49.155373" lon="2.482277">
+        <ele>46.22</ele>
+      </trkpt>
+      <trkpt lat="49.15528" lon="2.481282">
+        <ele>45.34</ele>
+      </trkpt>
+      <trkpt lat="49.155228" lon="2.479682">
+        <ele>43.95</ele>
+      </trkpt>
+      <trkpt lat="49.155163" lon="2.479468">
+        <ele>44</ele>
+      </trkpt>
+      <trkpt lat="49.155163" lon="2.479468">
+        <ele>44</ele>
+      </trkpt>
+      <trkpt lat="49.155216" lon="2.479635">
+        <ele>44.03</ele>
+      </trkpt>
+      <trkpt lat="49.155136" lon="2.479641">
+        <ele>44.55</ele>
+      </trkpt>
+      <trkpt lat="49.155098" lon="2.479605">
+        <ele>44.86</ele>
+      </trkpt>
+      <trkpt lat="49.155037" lon="2.479454">
+        <ele>46.86</ele>
+      </trkpt>
+      <trkpt lat="49.155006" lon="2.479432">
+        <ele>47.73</ele>
+      </trkpt>
+      <trkpt lat="49.15497" lon="2.479423">
+        <ele>48.75</ele>
+      </trkpt>
+      <trkpt lat="49.15494" lon="2.479465">
+        <ele>49.89</ele>
+      </trkpt>
+      <trkpt lat="49.154896" lon="2.47972">
+        <ele>54.94</ele>
+      </trkpt>
+      <trkpt lat="49.154877" lon="2.479749">
+        <ele>55.7</ele>
+      </trkpt>
+      <trkpt lat="49.154835" lon="2.479782">
+        <ele>57.38</ele>
+      </trkpt>
+      <trkpt lat="49.154762" lon="2.479782">
+        <ele>59.65</ele>
+      </trkpt>
+      <trkpt lat="49.15467" lon="2.479802">
+        <ele>60.94</ele>
+      </trkpt>
+      <trkpt lat="49.154285" lon="2.479574">
+        <ele>66.66</ele>
+      </trkpt>
+      <trkpt lat="49.15423" lon="2.479509">
+        <ele>67.46</ele>
+      </trkpt>
+      <trkpt lat="49.15409" lon="2.479474">
+        <ele>69.08</ele>
+      </trkpt>
+      <trkpt lat="49.15397" lon="2.479504">
+        <ele>70.56</ele>
+      </trkpt>
+      <trkpt lat="49.153866" lon="2.479551">
+        <ele>71.67</ele>
+      </trkpt>
+      <trkpt lat="49.15381" lon="2.479603">
+        <ele>72.42</ele>
+      </trkpt>
+      <trkpt lat="49.15376" lon="2.479622">
+        <ele>72.94</ele>
+      </trkpt>
+      <trkpt lat="49.1537" lon="2.479617">
+        <ele>73.43</ele>
+      </trkpt>
+      <trkpt lat="49.153675" lon="2.479629">
+        <ele>73.66</ele>
+      </trkpt>
+      <trkpt lat="49.153656" lon="2.479658">
+        <ele>73.87</ele>
+      </trkpt>
+      <trkpt lat="49.15365" lon="2.479787">
+        <ele>74.53</ele>
+      </trkpt>
+      <trkpt lat="49.1536" lon="2.479838">
+        <ele>74.93</ele>
+      </trkpt>
+      <trkpt lat="49.15348" lon="2.479601">
+        <ele>75.24</ele>
+      </trkpt>
+      <trkpt lat="49.152695" lon="2.480741">
+        <ele>75.52</ele>
+      </trkpt>
+      <trkpt lat="49.152695" lon="2.480741">
+        <ele>75.52</ele>
+      </trkpt>
+      <trkpt lat="49.148647" lon="2.486616">
+        <ele>77</ele>
+      </trkpt>
+      <trkpt lat="49.147335" lon="2.49154">
+        <ele>74.25</ele>
+      </trkpt>
+      <trkpt lat="49.14724" lon="2.491782">
+        <ele>74</ele>
+      </trkpt>
+      <trkpt lat="49.1442" lon="2.489059">
+        <ele>79</ele>
+      </trkpt>
+      <trkpt lat="49.142082" lon="2.487133">
+        <ele>83.7</ele>
+      </trkpt>
+      <trkpt lat="49.141735" lon="2.487481">
+        <ele>83.46</ele>
+      </trkpt>
+      <trkpt lat="49.141617" lon="2.487746">
+        <ele>83.42</ele>
+      </trkpt>
+      <trkpt lat="49.14116" lon="2.488207">
+        <ele>83.44</ele>
+      </trkpt>
+      <trkpt lat="49.140194" lon="2.489144">
+        <ele>84.01</ele>
+      </trkpt>
+      <trkpt lat="49.140194" lon="2.489144">
+        <ele>84.01</ele>
+      </trkpt>
+      <trkpt lat="49.140163" lon="2.489172">
+        <ele>84</ele>
+      </trkpt>
+      <trkpt lat="49.13973" lon="2.489496">
+        <ele>84.68</ele>
+      </trkpt>
+      <trkpt lat="49.13971" lon="2.489402">
+        <ele>84.91</ele>
+      </trkpt>
+      <trkpt lat="49.139664" lon="2.489244">
+        <ele>85.28</ele>
+      </trkpt>
+      <trkpt lat="49.139484" lon="2.488777">
+        <ele>85</ele>
+      </trkpt>
+      <trkpt lat="49.139423" lon="2.488777">
+        <ele>85</ele>
+      </trkpt>
+      <trkpt lat="49.139393" lon="2.488761">
+        <ele>85</ele>
+      </trkpt>
+      <trkpt lat="49.13937" lon="2.488745">
+        <ele>85</ele>
+      </trkpt>
+      <trkpt lat="49.13934" lon="2.488671">
+        <ele>85</ele>
+      </trkpt>
+      <trkpt lat="49.139297" lon="2.488671">
+        <ele>85.03</ele>
+      </trkpt>
+      <trkpt lat="49.13925" lon="2.48869">
+        <ele>85.13</ele>
+      </trkpt>
+      <trkpt lat="49.139004" lon="2.488875">
+        <ele>85.93</ele>
+      </trkpt>
+      <trkpt lat="49.138893" lon="2.488971">
+        <ele>86</ele>
+      </trkpt>
+      <trkpt lat="49.138813" lon="2.488784">
+        <ele>86</ele>
+      </trkpt>
+      <trkpt lat="49.138783" lon="2.488704">
+        <ele>86</ele>
+      </trkpt>
+      <trkpt lat="49.138767" lon="2.488632">
+        <ele>86</ele>
+      </trkpt>
+      <trkpt lat="49.138733" lon="2.48869">
+        <ele>86.03</ele>
+      </trkpt>
+      <trkpt lat="49.138367" lon="2.48897">
+        <ele>86.72</ele>
+      </trkpt>
+      <trkpt lat="49.13831" lon="2.489048">
+        <ele>86.76</ele>
+      </trkpt>
+      <trkpt lat="49.13821" lon="2.489071">
+        <ele>86.81</ele>
+      </trkpt>
+      <trkpt lat="49.13808" lon="2.489136">
+        <ele>86.98</ele>
+      </trkpt>
+      <trkpt lat="49.137985" lon="2.489222">
+        <ele>87.12</ele>
+      </trkpt>
+      <trkpt lat="49.137928" lon="2.489331">
+        <ele>87.22</ele>
+      </trkpt>
+      <trkpt lat="49.137897" lon="2.489428">
+        <ele>87.29</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
