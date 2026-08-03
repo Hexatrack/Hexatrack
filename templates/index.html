@@ -8,10 +8,10 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
-    <!-- Alpine.js (Necessaire pour la gestion des onglets x-data) -->
+    <!-- Alpine.js (Nécessaire pour les onglets x-data) -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <!-- CSS & JS Leaflet + Plugin GPX pour afficher la trace -->
+    <!-- CSS & JS Leaflet + Plugin GPX -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
@@ -21,7 +21,6 @@
             background: linear-gradient(rgba(15, 23, 42, 0.90), rgba(15, 23, 42, 0.96)), url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1920&q=80');
             background-size: cover; background-position: center;
         }
-        /* Ajustement z-index carte leaflet */
         #hexatrack-map {
             z-index: 10;
         }
@@ -170,15 +169,15 @@
                     <p class="text-slate-400 text-[11px]">Pour toute question, besoin d'informations ou si les points d'eau ne s'affichent pas sur votre appareil, contactez-moi directement sur Instagram : <a href="https://instagram.com/hexa_track" target="_blank" class="text-emerald-400 font-bold underline hover:text-emerald-300">@hexa_track</a></p>
                 </div>
 
-                <!-- BOUTONS DE TÉLÉCHARGEMENT DIRECT DE FICHIERS GPX -->
+                <!-- BOUTONS DE TÉLÉCHARGEMENT DIRECT DE FICHIERS GPX MODIFIÉS -->
                 <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2">
-                    <a href="/telecharger/10" download="Hexatrack_10KM.gpx" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">
+                    <a href="{{ url_for('static', filename='gpx/10K.gpx') }}" download class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">
                         📥 Télécharger GPX 10 KM
                     </a>
-                    <a href="/telecharger/50" download="Hexatrack_50KM.gpx" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">
+                    <a href="{{ url_for('static', filename='gpx/50K.gpx') }}" download class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">
                         📥 Télécharger GPX 50 KM
                     </a>
-                    <a href="/telecharger/100" download="Hexatrack_100KM.gpx" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">
+                    <a href="{{ url_for('static', filename='gpx/100K.gpx') }}" download class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">
                         📥 Télécharger GPX 100 KM
                     </a>
                 </div>
@@ -210,7 +209,7 @@
     <section class="max-w-6xl mx-auto px-4 pt-8">
         <div class="mb-4">
             <h2 class="text-2xl font-black text-slate-100">🗺️ Carte de France des Explorations Hexatrack</h2>
-            <p class="text-slate-400 text-xs mt-1">Zoomez sur l'Oise pour faire apparaître le tracé GPX complet du parcours !</p>
+            <p class="text-slate-400 text-xs mt-1">Le tracé GPX du parcours 100 KM s'affiche dynamiquement sur la carte ci-dessous.</p>
         </div>
         <div id="hexatrack-map" class="w-full h-[450px] rounded-2xl border border-slate-700/80 shadow-2xl overflow-hidden"></div>
     </section>
@@ -433,22 +432,22 @@
         &copy; Exploration Hexatrack Outdoor Tracks — Free & Autonome
     </footer>
 
-    <!-- SCRIPT INITIALISATION DE LA CARTE ET DE LA TRACE GPX -->
+    <!-- SCRIPT INITIALISATION DE LA CARTE ET DE LA TRACE GPX MODIFIÉ -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // 1. Initialisation de la carte Leaflet (Centrée par défaut sur l'Oise / Compiègne)
+            // Initialisation de la carte Leaflet (Centrée par défaut sur l'Oise)
             const map = L.map('hexatrack-map').setView([49.3, 2.7], 9);
 
-            // 2. Fonds de carte (OpenStreetMap)
+            // Fonds de carte OpenStreetMap
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 18,
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
 
-            // 3. Emplacement de votre fichier GPX (Remplacez le chemin vers votre vrai fichier GPX)
-            const gpxUrl = '/telecharger/100'; // ou '/static/gpx/100km.gpx'
+            // Chemin dynamique vers votre fichier static/gpx/100K.gpx
+            const gpxUrl = "{{ url_for('static', filename='gpx/100K.gpx') }}";
 
-            // 4. Chargement et affichage de la trace sur la carte
+            // Chargement et affichage du GPX
             new L.GPX(gpxUrl, {
                 async: true,
                 marker_options: {
@@ -457,13 +456,13 @@
                     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/images/marker-shadow.png'
                 },
                 polyline_options: {
-                    color: '#10b981', // Couleur vert émeraude (style Hexatrack)
+                    color: '#10b981', // Vert émeraude
                     opacity: 0.85,
                     weight: 5,
                     lineCap: 'round'
                 }
             }).on('loaded', function(e) {
-                // Auto-fit du zoom de la carte sur l'ensemble de la trace GPX
+                // Ajustement du zoom pour englober tout le tracé
                 map.fitBounds(e.target.getBounds());
             }).addTo(map);
         });
