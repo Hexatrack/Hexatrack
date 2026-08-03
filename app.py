@@ -101,24 +101,31 @@ def index():
         conseils=conseils_liste
     )
 
-@app.route('/telecharger/<distance>')
-def telecharger(distance):
-    filename_map = {
-        '10': '10k.gpx',
-        '50': '50k.gpx',
-        '100': '100k.gpx'
+@app.route('/telecharger/<filename>')
+def telecharger_gpx(filename):
+    # Correspondance entre le fichier demandé et le libellé à écrire dans le Google Sheet
+    distance_map = {
+        '10K.gpx': '10 KM',
+        '50K.gpx': '50 KM',
+        '100K.gpx': '100 KM',
+        '10k.gpx': '10 KM',
+        '50k.gpx': '50 KM',
+        '100k.gpx': '100 KM'
     }
-    
-    if distance in filename_map:
+
+    if filename in distance_map:
         try:
+            # Connexion à l'onglet TELECHARGEMENTS et ajout d'une ligne d'horodatage
             sheet_dl = connexion_google_sheet("TELECHARGEMENTS")
             horodatage = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-            sheet_dl.append_row([horodatage, f"{distance} KM"])
+            sheet_dl.append_row([horodatage, distance_map[filename]])
+            print(f"✅ Téléchargement consigné dans Google Sheet : {horodatage} | {distance_map[filename]}")
         except Exception as e:
-            print(f"Erreur comptage téléchargement: {e}")
+            print(f"⚠️ Erreur comptage téléchargement: {e}")
 
-        return send_from_directory(GPX_FOLDER, filename_map[distance], as_attachment=True)
-    
+        # Envoie le fichier depuis static/gpx/
+        return send_from_directory(GPX_FOLDER, filename, as_attachment=True)
+
     return redirect(url_for('index'))
 
 @app.route('/soumettre', methods=['POST'])
