@@ -1,5 +1,7 @@
 import os
 import json
+import base64
+import requests
 import gspread
 from datetime import datetime
 from google.oauth2.service_account import Credentials
@@ -10,13 +12,13 @@ from collections import Counter
 app = Flask(__name__)
 app.secret_key = "hexatrack_aventure_secrete"
 
+# 🔑 TA CLÉ API IMGBB INTÉGRÉE
+IMGBB_API_KEY = "d178de7aba683931c7e466de0baee20c"
+
 # Configuration des dossiers
-UPLOAD_FOLDER = os.path.join('static', 'uploads')
 GPX_FOLDER = os.path.join('static', 'gpx')
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webp'}
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(GPX_FOLDER, exist_ok=True)
 
 SCOPES = [
@@ -27,13 +29,45 @@ SCOPES = [
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+def uploader_photo_imgbb(file_storage):
+    """Téléverse la photo sur ImgBB et retourne son URL web permanente"""
+    if not file_storage or file_storage.filename == '':
+        return ""
+    
+    try:
+        # Conversion de l'image en base64
+        image_bytes = file_storage.read()
+        image_b64 = base64.b64encode(image_bytes).decode('utf-8')
+        
+        # Envoi à l'API ImgBB
+        response = requests.post(
+            "https://api.imgbb.com/1/upload",
+            data={
+                "key": IMGBB_API_KEY,
+                "image": image_b64
+            },
+            timeout=10
+        )
+        
+        data = response.json()
+        if data.get("success"):
+            url_photo = data["data"]["url"]
+            print(f"✅ Photo hébergée avec succès sur ImgBB : {url_photo}")
+            return url_photo
+        else:
+            print(f"⚠️ Erreur ImgBB : {data}")
+            return ""
+    except Exception as e:
+        print(f"⚠️ Erreur d'envoi vers ImgBB : {e}")
+        return ""
+
 def connexion_google_sheet(onglet_name=None):
-    # Si on est sur Render (lecture via la variable secrète)
+    # En ligne sur Render (variable d'environnement)
     if "GOOGLE_CREDENTIALS" in os.environ:
         creds_dict = json.loads(os.environ.get("GOOGLE_CREDENTIALS"))
         creds = Credentials.from_service_account_info(creds_dict, scopes=SCOPES)
     else:
-        # Si on est sur ton ordinateur (lecture via le fichier local)
+        # En local sur ton PC (fichier credentials.json)
         creds = Credentials.from_service_account_file("credentials.json", scopes=SCOPES)
 
     client = gspread.authorize(creds)
@@ -146,14 +180,11 @@ def soumettre():
         flash("❌ Veuillez remplir tous les champs obligatoires (Nom, Téléphone, Chrono, Lien de l'activité).", "error")
         return redirect(url_for('index'))
 
+    # Traitement et hébergement de la photo sur ImgBB
     if 'photo_file' in request.files:
         file = request.files['photo_file']
         if file and file.filename != '' and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            full_filename = f"{nom.replace(' ', '_')}_{filename}"
-            filepath = os.path.join(app.config['UPLOAD_FOLDER'], full_filename)
-            file.save(filepath)
-            photo_url = f"/static/uploads/{full_filename}"
+            photo_url = uploader_photo_imgbb(file)
 
     try:
         sheet_mode = connexion_google_sheet("MODE_PHOTOS")
