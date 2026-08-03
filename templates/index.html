@@ -161,11 +161,11 @@
                     <p class="text-slate-400 text-[11px]">Pour toute question, besoin d'informations ou si les points d'eau ne s'affichent pas sur votre appareil, contactez-moi directement sur Instagram : <a href="https://instagram.com/hexa_track" target="_blank" class="text-emerald-400 font-bold underline hover:text-emerald-300">@hexa_track</a></p>
                 </div>
 
-                <!-- BOUTONS DE TÉLÉCHARGEMENT COMPTABILISÉS DIRECTS -->
+                <!-- BOUTONS DE TÉLÉCHARGEMENT AVEC ENREGISTREMENT GOOGLE SHEET -->
                 <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2">
-                    <a href="{{ url_for('static', filename='gpx/10K.gpx') }}" download class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 10 KM</a>
-                    <a href="{{ url_for('static', filename='gpx/50K.gpx') }}" download class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 50 KM</a>
-                    <a href="{{ url_for('static', filename='gpx/100K.gpx') }}" download class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 100 KM</a>
+                    <a href="{{ url_for('telecharger_gpx', filename='10K.gpx') }}" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 10 KM</a>
+                    <a href="{{ url_for('telecharger_gpx', filename='50K.gpx') }}" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 50 KM</a>
+                    <a href="{{ url_for('telecharger_gpx', filename='100K.gpx') }}" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 100 KM</a>
                 </div>
             </div>
 
