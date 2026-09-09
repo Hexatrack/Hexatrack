@@ -20,7 +20,7 @@
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans antialiased">
 
-    <!-- FLASH MESSAGES (Message de confirmation placé tout en haut de la page) -->
+    <!-- FLASH MESSAGES -->
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
         <div class="max-w-6xl mx-auto px-4 pt-4">
@@ -46,7 +46,6 @@
     <header class="bg-trail min-h-[50vh] py-10 px-4 border-b border-slate-800 flex items-center">
         <div class="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             
-            <!-- BLOC LOGO & NOM DU SITE (A GAUCHE) -->
             <div class="md:col-span-5 lg:col-span-4 flex flex-col items-center md:items-start shrink-0">
                 <div class="w-48 h-48 md:w-60 md:h-60 drop-shadow-2xl">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450" width="100%" height="100%">
@@ -140,7 +139,6 @@
                 <p class="text-emerald-300 text-sm font-bold tracking-widest uppercase">Exploration en Autonomie</p>
             </div>
 
-            <!-- TEXTES ET BOUTONS A DROITE -->
             <div class="md:col-span-7 lg:col-span-8 text-center md:text-left space-y-4">
                 <div class="flex flex-wrap justify-center md:justify-start gap-2">
                     <span class="text-emerald-400 font-mono tracking-widest text-xs uppercase bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Parcours Compiègne ➔ Orry-la-Ville</span>
@@ -150,18 +148,15 @@
                 <h2 class="text-3xl md:text-5xl font-black tracking-tight text-slate-100">L'Ultra des 3 Forêts</h2>
                 <p class="text-slate-300 text-sm md:text-base leading-relaxed">Une course dans le département de l'Oise, au cœur de la région Hauts-de-France, très facilement accessible en train depuis Paris.<br>Forêt de Compiègne, Halatte et Chantilly : une aventure 100% libre et autonome Gare à Gare.<br>Validations de l'exploration sur Hexatrack jusqu'au <strong>31 mars 2027</strong>.</p>
                 
-                <!-- PRECISONS SUR LA PHILOSOPHIE HEXATRACK -->
                 <p class="text-emerald-300/90 text-xs italic bg-emerald-950/40 border border-emerald-500/20 p-3 rounded-xl leading-relaxed">
                     🍃 <strong>Esprit Hexatrack :</strong> Notez qu'Hexatrack n'est pas vraiment une course compétitive traditionnelle : mon but principal est de vous faire découvrir la France autrement, à travers de longs itinéraires à pied réalisables en un week-end et reliés de gare en gare.
                 </p>
 
-                <!-- INFORMATION TRACÉ ET INSTAGRAM MAJ -->
                 <div class="bg-slate-800/60 border border-slate-700 p-3.5 rounded-xl text-xs text-slate-300 space-y-1">
                     <p>🗺️ <strong>Points de passage & Contact :</strong> Les lieux remarquables et points d'eau sont intégrés directement dans le fichier GPX.</p>
                     <p class="text-slate-400 text-[11px]">Pour toute question, besoin d'informations ou si les points d'eau ne s'affichent pas sur votre appareil, contactez-moi directement sur Instagram : <a href="https://instagram.com/hexa_track" target="_blank" class="text-emerald-400 font-bold underline hover:text-emerald-300">@hexa_track</a></p>
                 </div>
 
-                <!-- ENCADRÉ INCITATION INSTAGRAM -->
                 <div class="bg-gradient-to-r from-purple-900/30 via-pink-900/30 to-amber-900/30 border border-pink-500/30 p-3.5 rounded-xl text-xs text-slate-200 flex items-center gap-3">
                     <svg class="w-6 h-6 shrink-0 text-pink-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -171,7 +166,6 @@
                     </div>
                 </div>
 
-                <!-- BOUTONS DE TÉLÉCHARGEMENT AVEC ENREGISTREMENT GOOGLE SHEET -->
                 <div class="space-y-2">
                     <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2">
                         <a href="{{ url_for('telecharger_gpx', filename='10K.gpx') }}" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 10 KM</a>
@@ -179,7 +173,6 @@
                         <a href="{{ url_for('telecharger_gpx', filename='100K.gpx') }}" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 100 KM</a>
                     </div>
 
-                    <!-- TRACES DE REMPLACEMENT (SANS HALATTE) -->
                     <div class="pt-1">
                         <p class="text-[11px] text-amber-400 font-medium italic mb-1.5">⚠️ Traces de remplacement en attendant la réouverture de la forêt d'Halatte :</p>
                         <div class="flex flex-wrap justify-center md:justify-start gap-2">
@@ -193,26 +186,20 @@
         </div>
     </header>
 
-    <!-- BANNIÈRE DE SÉCURITÉ & RESPONSABILITÉ -->
+    <!-- BANNIÈRE SÉCURITÉ -->
     <section class="max-w-6xl mx-auto px-4 mt-6">
         <div class="bg-slate-800/80 border border-amber-500/40 rounded-2xl p-5 text-slate-300 text-xs leading-relaxed space-y-2">
             <div class="flex items-center gap-2 font-bold text-amber-400 text-sm">
                 <span>⚠️</span>
                 <span>Responsabilité, Autonomie & Sécurité du Participant</span>
             </div>
-            <p>
-                En vous élançant sur les tracés d'<strong>Hexatrack - L'Ultra des 3 Forêts</strong>, vous vous engagez sous votre propre et entière responsabilité. Les tracés sont fournis à titre indicatif : l'état des chemins, la végétation et les conditions de passage peuvent évoluer avec la météo et le temps.
-            </p>
-            <p>
-                <strong>Vous devez être physiquement et mentalement apte</strong> à réaliser cet effort en autonomie totale. L'organisation et le créateur des traces ne sauraient être tenus responsables en cas d'accident, de blessure, de détérioration de matériel ou de perte d'orientation.
-            </p>
-            <p class="text-slate-400 font-mono text-[11px] pt-1">
-                🎒 <strong>Matériel recommandé :</strong> Téléphone chargé avec le tracé GPX, réserve d'eau suffisante, ravitaillement, couverture de survie, vêtement chaud/imperméable adapté aux conditions.
-            </p>
+            <p>En vous élançant sur les tracés d'<strong>Hexatrack - L'Ultra des 3 Forêts</strong>, vous vous engagez sous votre propre et entière responsabilité. Les tracés sont fournis à titre indicatif : l'état des chemins, la végétation et les conditions de passage peuvent évoluer avec la météo et le temps.</p>
+            <p><strong>Vous devez être physiquement et mentalement apte</strong> à réaliser cet effort en autonomie totale. L'organisation et le créateur des traces ne sauraient être tenus responsables en cas d'accident, de blessure, de détérioration de matériel ou de perte d'orientation.</p>
+            <p class="text-slate-400 font-mono text-[11px] pt-1">🎒 <strong>Matériel recommandé :</strong> Téléphone chargé avec le tracé GPX, réserve d'eau suffisante, ravitaillement, couverture de survie, vêtement chaud/imperméable adapté aux conditions.</p>
         </div>
     </section>
 
-    <!-- SECTION CARTE DE FRANCE INTERACTIVE -->
+    <!-- CARTE DE FRANCE INTERACTIVE -->
     <section class="max-w-6xl mx-auto px-4 pt-8">
         <div class="mb-4">
             <h2 class="text-2xl font-black text-slate-100">🗺️ Carte de France des Explorations Hexatrack</h2>
@@ -223,32 +210,36 @@
 
     <main class="max-w-6xl mx-auto px-4 py-8 space-y-12">
 
-        <!-- SYSTEME D'ONGLETS DISTANCES (10, 50, 100, AR100) -->
+        <!-- SYSTEME D'ONGLETS DISTANCES -->
         <section x-data="{ tab: '10' }">
             <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-3">
                 <div>
                     <h2 class="text-2xl font-black">🏆 Hall of Fame & Classements</h2>
                     <p class="text-slate-400 text-xs mt-1">Sélectionnez la distance (valide jusqu'au 31/03/2027).</p>
                 </div>
-                <!-- ONGLETS -->
+                <!-- ONGLETS AVEC SANS_HALATTE -->
                 <div class="flex flex-wrap shrink-0 bg-slate-800/80 p-1 rounded-xl border border-slate-700 gap-1">
                     <button @click="tab = '10'" :class="tab === '10' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-3 py-1.5 rounded-lg text-xs transition-all">10 KM</button>
                     <button @click="tab = '50'" :class="tab === '50' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-3 py-1.5 rounded-lg text-xs transition-all">50 KM</button>
+                    <button @click="tab = '50_sans_Halatte'" :class="tab === '50_sans_Halatte' ? 'bg-amber-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-3 py-1.5 rounded-lg text-xs transition-all">50K (sans Halatte)</button>
                     <button @click="tab = '100'" :class="tab === '100' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-3 py-1.5 rounded-lg text-xs transition-all">100 KM</button>
+                    <button @click="tab = '100_sans_Halatte'" :class="tab === '100_sans_Halatte' ? 'bg-amber-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-3 py-1.5 rounded-lg text-xs transition-all">100K (sans Halatte)</button>
                     <button @click="tab = 'AR100'" :class="tab === 'AR100' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-3 py-1.5 rounded-lg text-xs transition-all">Aller-Retour 100K (La Hamadi🐺)</button>
                 </div>
             </div>
 
             <!-- CONTENU DE CHAQUE DISTANCE -->
-            {% for d in ['10', '50', '100', 'AR100'] %}
+            {% for d in ['10', '50', '50_sans_Halatte', '100', '100_sans_Halatte', 'AR100'] %}
             <div x-show="tab === '{{ d }}'" class="space-y-6">
                 
-                <!-- DISTINCTIONS D'HONNEUR PAR DISTANCE -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <!-- LOCAL LEGEND -->
                     <div class="bg-slate-800/40 border border-amber-500/30 rounded-2xl p-5 shadow-inner">
                         <span class="text-[10px] font-mono tracking-wider font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20 uppercase">
-                            {% if d == 'AR100' %}Local Legend Aller-Retour 100K{% else %}Local Legend {{ d }}KM{% endif %}
+                            {% if d == 'AR100' %}Local Legend Aller-Retour 100K
+                            {% elif d == '50_sans_Halatte' %}Local Legend 50K (sans Halatte)
+                            {% elif d == '100_sans_Halatte' %}Local Legend 100K (sans Halatte)
+                            {% else %}Local Legend {{ d }}KM{% endif %}
                         </span>
                         <h3 class="text-base font-bold mt-2.5 text-slate-100">👑 Le Plus Fidèle</h3>
                         <div class="mt-3.5">
@@ -264,7 +255,10 @@
                     <!-- LE PLUS COURAGEUX -->
                     <div class="bg-slate-800/40 border border-emerald-500/30 rounded-2xl p-5 shadow-inner">
                         <span class="text-[10px] font-mono tracking-wider font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 uppercase">
-                            {% if d == 'AR100' %}Mental d'Acier Aller-Retour 100K{% else %}Mental d'Acier {{ d }}KM{% endif %}
+                            {% if d == 'AR100' %}Mental d'Acier Aller-Retour 100K
+                            {% elif d == '50_sans_Halatte' %}Mental d'Acier 50K (sans Halatte)
+                            {% elif d == '100_sans_Halatte' %}Mental d'Acier 100K (sans Halatte)
+                            {% else %}Mental d'Acier {{ d }}KM{% endif %}
                         </span>
                         <h3 class="text-base font-bold mt-2.5 text-slate-100">💪 Le Plus (Lent) Courageux</h3>
                         <div class="mt-3.5">
@@ -278,7 +272,7 @@
                     </div>
                 </div>
 
-                <!-- TABLEAU DES CLASSEMENTS -->
+                <!-- TABLEAU DE CLASSEMENT -->
                 <div class="bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden shadow-xl">
                     <table class="w-full text-left border-collapse text-sm">
                         <thead>
@@ -311,7 +305,7 @@
                             {% else %}
                             <tr>
                                 <td colspan="4" class="p-6 text-center text-slate-500 text-xs italic">
-                                    Aucun temps enregistré pour {% if d == 'AR100' %}l'Aller-Retour 100K (La Hamadi🐺){% else %}{{ d }} KM{% endif %}.
+                                    Aucun temps enregistré pour ce parcours pour le moment.
                                 </td>
                             </tr>
                             {% endfor %}
@@ -323,7 +317,7 @@
             {% endfor %}
         </section>
 
-        <!-- GALERIE DES PHOTOS CHOISIES MODÉRÉES -->
+        <!-- GALERIE PHOTOS -->
         <section class="border-t border-slate-800 pt-8 space-y-4">
             <div>
                 <h2 class="text-2xl font-black">✨ Galerie Photos de l'Aventure</h2>
@@ -337,7 +331,10 @@
                     <div class="p-4 border-t border-slate-700">
                         <div class="text-sm font-bold text-slate-100">{{ p.nom }}</div>
                         <div class="text-xs text-slate-400 font-mono mt-0.5">
-                            {% if p.distance == 'AR100' %}Aller-Retour 100K (La Hamadi🐺){% else %}{{ p.distance }} KM{% endif %}
+                            {% if p.distance == 'AR100' %}Aller-Retour 100K (La Hamadi🐺)
+                            {% elif p.distance == '50_sans_Halatte' %}50K (sans Halatte)
+                            {% elif p.distance == '100_sans_Halatte' %}100K (sans Halatte)
+                            {% else %}{{ p.distance }} KM{% endif %}
                         </div>
                     </div>
                 </div>
@@ -347,10 +344,9 @@
             </div>
         </section>
 
-        <!-- SECTION CONSEILS, REMARQUES & FORMULAIRE -->
+        <!-- CONSEILS & FORMULAIRE -->
         <section class="border-t border-slate-800 pt-8 grid grid-cols-1 lg:grid-cols-2 gap-10">
             
-            <!-- AVIS, CONSEILS ET REPONSES DE L'ORGANISATEUR -->
             <div class="space-y-4">
                 <h2 class="text-2xl font-black">💧 Points d'Eau, Avis & Retours d'Expérience</h2>
                 <p class="text-slate-400 text-xs mt-1">Les astuces, remarques sur le tracé et conseils partagés par la communauté Hexatrack.</p>
@@ -360,12 +356,14 @@
                         <div class="flex justify-between font-bold text-emerald-400">
                             <span>{{ c.nom }}</span>
                             <span class="text-slate-500 font-mono">
-                                {% if c.distance == 'AR100' %}Aller-Retour 100K{% else %}{{ c.distance }} KM{% endif %}
+                                {% if c.distance == 'AR100' %}Aller-Retour 100K
+                                {% elif c.distance == '50_sans_Halatte' %}50K (sans Halatte)
+                                {% elif c.distance == '100_sans_Halatte' %}100K (sans Halatte)
+                                {% else %}{{ c.distance }} KM{% endif %}
                             </span>
                         </div>
                         <p class="text-slate-300 italic leading-relaxed">"{{ c.conseil }}"</p>
 
-                        <!-- AFFICHAGE DE LA RÉPONSE ADMINISTRATEUR -->
                         {% if c.reponse_admin and c.reponse_admin.strip() %}
                         <div class="mt-2.5 pt-2 border-t border-slate-700/60 bg-emerald-950/30 -mx-2 px-3 py-2 rounded-lg border-l-2 border-l-emerald-400">
                             <span class="text-[10px] font-bold text-emerald-400 block mb-0.5">💬 Réponse d'Hexatrack :</span>
@@ -379,7 +377,7 @@
                 </div>
             </div>
 
-            <!-- FORMULAIRE DE SOUMISSION -->
+            <!-- FORMULAIRE -->
             <div class="bg-slate-800/60 border border-slate-700 rounded-2xl p-7 h-fit shadow-2xl">
                 <h2 class="text-2xl font-black mb-1">⏱️ Enregistrer mon exploration</h2>
                 <p class="text-slate-400 text-xs mb-6 leading-relaxed">Validez votre chrono et partagez votre expérience sur Hexatrack.</p>
@@ -409,7 +407,9 @@
                             <select name="distance" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-emerald-500 cursor-pointer">
                                 <option value="10">10 KM</option>
                                 <option value="50">50 KM</option>
+                                <option value="50_sans_Halatte">50K (sans Halatte)</option>
                                 <option value="100">100 KM</option>
+                                <option value="100_sans_Halatte">100K (sans Halatte)</option>
                                 <option value="AR100">Aller-Retour 100K (La Hamadi🐺)</option>
                             </select>
                         </div>
@@ -425,7 +425,6 @@
                         <input type="url" name="strava" required placeholder="https://www.strava.com/activities/..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-emerald-500">
                     </div>
 
-                    <!-- REFUS PUBLICATION STRAVA -->
                     <div class="flex items-start gap-2.5 pt-1">
                         <input type="checkbox" id="refus_strava" name="refus_strava" class="mt-0.5 rounded border-slate-700 bg-slate-900 text-emerald-500 focus:ring-emerald-500 cursor-pointer">
                         <label for="refus_strava" class="text-slate-300 text-[11px] leading-tight cursor-pointer">
@@ -445,7 +444,6 @@
                         <textarea name="conseil" rows="3" placeholder="Votre ressenti, vos astuces d'eau ou vos idées d'amélioration pour Hexatrack..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-emerald-500 transition-all"></textarea>
                     </div>
 
-                    <!-- REFUS PUBLICATION CONSEIL -->
                     <div class="flex items-start gap-2.5">
                         <input type="checkbox" id="refus_conseil" name="refus_conseil" class="mt-0.5 rounded border-slate-700 bg-slate-900 text-emerald-500 focus:ring-emerald-500 cursor-pointer">
                         <label for="refus_conseil" class="text-slate-300 text-[11px] leading-tight cursor-pointer">
@@ -465,13 +463,10 @@
         &copy; Exploration Hexatrack Outdoor Tracks — Free & Autonome — Édition #1 L'Ultra des 3 Forêts — Fin le 31/03/2027.
     </footer>
 
-    <!-- SCRIPT DE CARTE INTERACTIVE EN FRANÇAIS AVEC TRACE GPX ORANGE SANS MARQUEURS AU ZOOM -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // 1. Initialiser la carte centrée sur la France
             const map = L.map('hexatrack-map').setView([46.603354, 1.888334], 6);
 
-            // 2. Charger le fond de carte OpenStreetMap en FRANÇAIS
             L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
                 attribution: '&copy; OpenStreetMap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
                 maxZoom: 19
@@ -479,13 +474,12 @@
 
             let gpxLayer = null;
 
-            // 3. Charger le tracé GPX (en orange, sans aucun marqueur/waypoint le long de la ligne)
             const gpxUrl = "{{ url_for('static', filename='gpx/100K.gpx') }}"; 
 
             gpxLayer = new L.GPX(gpxUrl, {
                 async: true,
                 polyline_options: {
-                    color: '#ff4500', // Tracé en orange vif
+                    color: '#ff4500',
                     weight: 5,
                     opacity: 0.9,
                     lineCap: 'round'
@@ -494,11 +488,10 @@
                     startIconUrl: '',
                     endIconUrl: '',
                     shadowUrl: '',
-                    wptIconUrls: {} // Supprime tous les marqueurs/points le long de la trace GPX
+                    wptIconUrls: {}
                 }
             });
 
-            // 4. Ajouter le marqueur principal (Épingle)
             const marker = L.marker([49.422596, 2.822983]).addTo(map);
             
             const popupContent = `
@@ -511,7 +504,6 @@
             `;
             marker.bindPopup(popupContent);
 
-            // 5. Clic sur le bouton du popup pour zoomer et afficher le tracé orange
             marker.on('popupopen', function() {
                 const btn = document.getElementById('btn-zoom-trace');
                 if (btn) {
@@ -524,7 +516,6 @@
                 }
             });
 
-            // 6. GESTION DU ZOOM : Affiche la trace si on zoome (niveau >= 9), la masque si on dézoome (vue France)
             map.on('zoomend', function() {
                 const currentZoom = map.getZoom();
                 if (currentZoom >= 9) {
