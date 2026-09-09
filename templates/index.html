@@ -161,11 +161,32 @@
                     <p class="text-slate-400 text-[11px]">Pour toute question, besoin d'informations ou si les points d'eau ne s'affichent pas sur votre appareil, contactez-moi directement sur Instagram : <a href="https://instagram.com/hexa_track" target="_blank" class="text-emerald-400 font-bold underline hover:text-emerald-300">@hexa_track</a></p>
                 </div>
 
+                <!-- ENCADRÉ INCITATION INSTAGRAM -->
+                <div class="bg-gradient-to-r from-purple-900/30 via-pink-900/30 to-amber-900/30 border border-pink-500/30 p-3.5 rounded-xl text-xs text-slate-200 flex items-center gap-3">
+                    <svg class="w-6 h-6 shrink-0 text-pink-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    <div>
+                        <strong>Suivez l'aventure sur Instagram :</strong> Il est important de suivre <a href="https://instagram.com/hexa_track" target="_blank" class="text-pink-400 font-bold underline hover:text-pink-300">@hexa_track</a> pour être informé des prochaines courses dans les autres départements, suivre les exploits des participants et ne rater aucune information sur les parcours !
+                    </div>
+                </div>
+
                 <!-- BOUTONS DE TÉLÉCHARGEMENT AVEC ENREGISTREMENT GOOGLE SHEET -->
-                <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2">
-                    <a href="{{ url_for('telecharger_gpx', filename='10K.gpx') }}" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 10 KM</a>
-                    <a href="{{ url_for('telecharger_gpx', filename='50K.gpx') }}" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 50 KM</a>
-                    <a href="{{ url_for('telecharger_gpx', filename='100K.gpx') }}" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 100 KM</a>
+                <div class="space-y-2">
+                    <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2">
+                        <a href="{{ url_for('telecharger_gpx', filename='10K.gpx') }}" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 10 KM</a>
+                        <a href="{{ url_for('telecharger_gpx', filename='50K.gpx') }}" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 50 KM</a>
+                        <a href="{{ url_for('telecharger_gpx', filename='100K.gpx') }}" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 Télécharger GPX 100 KM</a>
+                    </div>
+
+                    <!-- TRACES DE REMPLACEMENT (SANS HALATTE) -->
+                    <div class="pt-1">
+                        <p class="text-[11px] text-amber-400 font-medium italic mb-1.5">⚠️ Traces de remplacement en attendant la réouverture de la forêt d'Halatte :</p>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-2">
+                            <a href="{{ url_for('telecharger_gpx', filename='50K(sans_Halatte).gpx') }}" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-4 py-2.5 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 50K(sans_Halatte)</a>
+                            <a href="{{ url_for('telecharger_gpx', filename='100K(sans_Halatte).gpx') }}" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-4 py-2.5 rounded-xl transition-all shadow-lg text-xs flex items-center gap-1.5">📥 100K(sans_Halatte)</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -202,30 +223,33 @@
 
     <main class="max-w-6xl mx-auto px-4 py-8 space-y-12">
 
-        <!-- SYSTEME D'ONGLETS DISTANCES (10, 50, 100) -->
+        <!-- SYSTEME D'ONGLETS DISTANCES (10, 50, 100, AR100) -->
         <section x-data="{ tab: '10' }">
-            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-3">
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-3">
                 <div>
                     <h2 class="text-2xl font-black">🏆 Hall of Fame & Classements</h2>
                     <p class="text-slate-400 text-xs mt-1">Sélectionnez la distance (valide jusqu'au 31/03/2027).</p>
                 </div>
                 <!-- ONGLETS -->
-                <div class="flex shrink-0 bg-slate-800/80 p-1 rounded-xl border border-slate-700">
-                    <button @click="tab = '10'" :class="tab === '10' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-xs transition-all">10 KM</button>
-                    <button @click="tab = '50'" :class="tab === '50' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-xs transition-all">50 KM</button>
-                    <button @click="tab = '100'" :class="tab === '100' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-xs transition-all">100 KM</button>
+                <div class="flex flex-wrap shrink-0 bg-slate-800/80 p-1 rounded-xl border border-slate-700 gap-1">
+                    <button @click="tab = '10'" :class="tab === '10' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-3 py-1.5 rounded-lg text-xs transition-all">10 KM</button>
+                    <button @click="tab = '50'" :class="tab === '50' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-3 py-1.5 rounded-lg text-xs transition-all">50 KM</button>
+                    <button @click="tab = '100'" :class="tab === '100' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-3 py-1.5 rounded-lg text-xs transition-all">100 KM</button>
+                    <button @click="tab = 'AR100'" :class="tab === 'AR100' ? 'bg-emerald-500 text-slate-950 font-black' : 'text-slate-400 hover:text-slate-200'" class="px-3 py-1.5 rounded-lg text-xs transition-all">Aller-Retour 100K (La Hamadi🐺)</button>
                 </div>
             </div>
 
             <!-- CONTENU DE CHAQUE DISTANCE -->
-            {% for d in ['10', '50', '100'] %}
+            {% for d in ['10', '50', '100', 'AR100'] %}
             <div x-show="tab === '{{ d }}'" class="space-y-6">
                 
                 <!-- DISTINCTIONS D'HONNEUR PAR DISTANCE -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <!-- LOCAL LEGEND -->
                     <div class="bg-slate-800/40 border border-amber-500/30 rounded-2xl p-5 shadow-inner">
-                        <span class="text-[10px] font-mono tracking-wider font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20 uppercase">Local Legend {{ d }}KM</span>
+                        <span class="text-[10px] font-mono tracking-wider font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20 uppercase">
+                            {% if d == 'AR100' %}Local Legend Aller-Retour 100K{% else %}Local Legend {{ d }}KM{% endif %}
+                        </span>
                         <h3 class="text-base font-bold mt-2.5 text-slate-100">👑 Le Plus Fidèle</h3>
                         <div class="mt-3.5">
                             {% if local_legend[d] %}
@@ -239,7 +263,9 @@
 
                     <!-- LE PLUS COURAGEUX -->
                     <div class="bg-slate-800/40 border border-emerald-500/30 rounded-2xl p-5 shadow-inner">
-                        <span class="text-[10px] font-mono tracking-wider font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 uppercase">Mental d'Acier {{ d }}KM</span>
+                        <span class="text-[10px] font-mono tracking-wider font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 uppercase">
+                            {% if d == 'AR100' %}Mental d'Acier Aller-Retour 100K{% else %}Mental d'Acier {{ d }}KM{% endif %}
+                        </span>
                         <h3 class="text-base font-bold mt-2.5 text-slate-100">💪 Le Plus (Lent) Courageux</h3>
                         <div class="mt-3.5">
                             {% if courageux[d] %}
@@ -267,7 +293,12 @@
                             {% for f in finishers[d] %}
                             <tr class="hover:bg-slate-800/30">
                                 <td class="p-4 font-bold text-slate-500">#{{ loop.index }}</td>
-                                <td class="p-4 font-bold text-slate-100">{{ f.nom }}</td>
+                                <td class="p-4 font-bold text-slate-100">
+                                    {{ f.nom }}
+                                    {% if f.instagram and f.instagram.strip() %}
+                                        <span class="block text-xs font-normal text-pink-400">@{{ f.instagram.replace('@', '') }}</span>
+                                    {% endif %}
+                                </td>
                                 <td class="p-4 font-mono font-bold text-emerald-400">{{ f.chrono }}</td>
                                 <td class="p-4">
                                     {% if f.strava %}
@@ -279,7 +310,9 @@
                             </tr>
                             {% else %}
                             <tr>
-                                <td colspan="4" class="p-6 text-center text-slate-500 text-xs italic">Aucun temps enregistré sur la distance {{ d }} KM.</td>
+                                <td colspan="4" class="p-6 text-center text-slate-500 text-xs italic">
+                                    Aucun temps enregistré pour {% if d == 'AR100' %}l'Aller-Retour 100K (La Hamadi🐺){% else %}{{ d }} KM{% endif %}.
+                                </td>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -303,7 +336,9 @@
                     <img src="{{ p.photo_url }}" alt="Photo souvenir Hexatrack" class="w-full h-56 object-cover">
                     <div class="p-4 border-t border-slate-700">
                         <div class="text-sm font-bold text-slate-100">{{ p.nom }}</div>
-                        <div class="text-xs text-slate-400 font-mono mt-0.5">{{ p.distance }} KM</div>
+                        <div class="text-xs text-slate-400 font-mono mt-0.5">
+                            {% if p.distance == 'AR100' %}Aller-Retour 100K (La Hamadi🐺){% else %}{{ p.distance }} KM{% endif %}
+                        </div>
                     </div>
                 </div>
                 {% else %}
@@ -324,7 +359,9 @@
                     <div class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl text-xs space-y-2 shadow-md">
                         <div class="flex justify-between font-bold text-emerald-400">
                             <span>{{ c.nom }}</span>
-                            <span class="text-slate-500 font-mono">{{ c.distance }} KM</span>
+                            <span class="text-slate-500 font-mono">
+                                {% if c.distance == 'AR100' %}Aller-Retour 100K{% else %}{{ c.distance }} KM{% endif %}
+                            </span>
                         </div>
                         <p class="text-slate-300 italic leading-relaxed">"{{ c.conseil }}"</p>
 
@@ -360,6 +397,12 @@
                         <input type="tel" name="telephone" required placeholder="Ex: 06 12 34 56 78" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-emerald-500 transition-all font-mono">
                     </div>
 
+                    <div>
+                        <label class="block font-mono text-slate-400 mb-1">Compte Instagram (facultatif)</label>
+                        <p class="text-slate-500 italic text-[11px] mb-1">Pour qu'on puisse repartager votre exploit sur le compte Instagram Hexatrack !</p>
+                        <input type="text" name="instagram" placeholder="Ex: @votre_pseudo" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-emerald-500 transition-all font-mono">
+                    </div>
+
                     <div class="grid grid-cols-2 gap-3.5">
                         <div>
                             <label class="block font-mono text-slate-400 mb-1">Distance Parcourue *</label>
@@ -367,6 +410,7 @@
                                 <option value="10">10 KM</option>
                                 <option value="50">50 KM</option>
                                 <option value="100">100 KM</option>
+                                <option value="AR100">Aller-Retour 100K (La Hamadi🐺)</option>
                             </select>
                         </div>
                         <div>
@@ -461,7 +505,7 @@
                 <div style="font-family: sans-serif; color: #0f172a; padding: 4px;">
                     <strong style="font-size: 14px; color: #059669; display: block; margin-bottom: 2px;">L'Ultra des 3 Forêts</strong>
                     <span style="font-size: 11px; color: #64748b; font-weight: bold;">📍 Oise (60) — Compiègne ➔ Orry-la-Ville</span>
-                    <p style="font-size: 11px; margin: 6px 0; color: #334155;"><strong>Distances :</strong> 10 KM | 50 KM | 100 KM</p>
+                    <p style="font-size: 11px; margin: 6px 0; color: #334155;"><strong>Distances :</strong> 10 KM | 50 KM | 100 KM | Aller-Retour 100K</p>
                     <button id="btn-zoom-trace" style="display: inline-block; background-color: #10b981; color: #ffffff; border: none; cursor: pointer; font-size: 11px; font-weight: bold; padding: 6px 12px; border-radius: 8px; margin-top: 4px;">🔍 Voir le tracé GPX</button>
                 </div>
             `;
