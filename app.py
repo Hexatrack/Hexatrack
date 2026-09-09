@@ -12,10 +12,8 @@ from collections import Counter
 app = Flask(__name__)
 app.secret_key = "hexatrack_aventure_secrete"
 
-# 🔑 TA CLÉ API IMGBB INTÉGRÉE
 IMGBB_API_KEY = "d178de7aba683931c7e466de0baee20c"
 
-# Configuration des dossiers
 GPX_FOLDER = os.path.join('static', 'gpx')
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webp'}
 
@@ -30,16 +28,13 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def uploader_photo_imgbb(file_storage):
-    """Téléverse la photo sur ImgBB et retourne son URL web permanente"""
     if not file_storage or file_storage.filename == '':
         return ""
     
     try:
-        # Conversion de l'image en base64
         image_bytes = file_storage.read()
         image_b64 = base64.b64encode(image_bytes).decode('utf-8')
         
-        # Envoi à l'API ImgBB
         response = requests.post(
             "https://api.imgbb.com/1/upload",
             data={
@@ -62,12 +57,10 @@ def uploader_photo_imgbb(file_storage):
         return ""
 
 def connexion_google_sheet(onglet_name=None):
-    # En ligne sur Render (variable d'environnement)
     if "GOOGLE_CREDENTIALS" in os.environ:
         creds_dict = json.loads(os.environ.get("GOOGLE_CREDENTIALS"))
         creds = Credentials.from_service_account_info(creds_dict, scopes=SCOPES)
     else:
-        # En local sur ton PC (fichier credentials.json)
         creds = Credentials.from_service_account_file("credentials.json", scopes=SCOPES)
 
     client = gspread.authorize(creds)
@@ -81,9 +74,12 @@ def connexion_google_sheet(onglet_name=None):
 
 @app.route('/')
 def index():
-    finishers_par_distance = {'10': [], '50': [], '100': [], 'AR100': []}
-    courageux_par_distance = {'10': None, '50': None, '100': None, 'AR100': None}
-    local_legend_par_distance = {'10': None, '50': None, '100': None, 'AR100': None}
+    # Liste de toutes les distances gérées par le site
+    distances_cles = ['10', '50', '50_sans_Halatte', '100', '100_sans_Halatte', 'AR100']
+
+    finishers_par_distance = {d: [] for d in distances_cles}
+    courageux_par_distance = {d: None for d in distances_cles}
+    local_legend_par_distance = {d: None for d in distances_cles}
     belles_photos_choisies = []
     conseils_liste = []
 
@@ -94,13 +90,12 @@ def index():
         for f in tous_les_enregistrements:
             valide_valeur = str(f.get('valide', '')).strip().upper()
             
-            # Récupération du conseil / avis et de la réponse admin éventuelle
             if f.get('conseil') and str(f.get('conseil')).strip():
                 conseils_liste.append({
                     'nom': f.get('nom', 'Anonyme'),
                     'distance': f.get('distance', '-'),
                     'conseil': f.get('conseil'),
-                    'reponse_admin': f.get('reponse_admin', '') # Réponse de l'organisateur
+                    'reponse_admin': f.get('reponse_admin', '')
                 })
 
             if valide_valeur == 'OUI':
@@ -111,7 +106,7 @@ def index():
                 if f.get('photo_url') and str(f.get('photo_url')).strip():
                     belles_photos_choisies.append(f)
 
-        for dist in ['10', '50', '100', 'AR100']:
+        for dist in distances_cles:
             coureurs = finishers_par_distance[dist]
             if coureurs:
                 coureurs_tries = sorted(coureurs, key=lambda x: str(x.get('chrono', '')))
@@ -137,7 +132,6 @@ def index():
 
 @app.route('/telecharger/<filename>')
 def telecharger_gpx(filename):
-    # Correspondance entre le fichier demandé et le libellé à écrire dans le Google Sheet
     distance_map = {
         '10K.gpx': '10 KM',
         '50K.gpx': '50 KM',
@@ -151,7 +145,6 @@ def telecharger_gpx(filename):
 
     if filename in distance_map:
         try:
-            # Connexion à l'onglet TELECHARGEMENTS et ajout d'une ligne d'horodatage
             sheet_dl = connexion_google_sheet("TELECHARGEMENTS")
             horodatage = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
             sheet_dl.append_row([horodatage, distance_map[filename]])
@@ -159,7 +152,6 @@ def telecharger_gpx(filename):
         except Exception as e:
             print(f"⚠️ Erreur comptage téléchargement: {e}")
 
-        # Envoie le fichier depuis static/gpx/
         return send_from_directory(GPX_FOLDER, filename, as_attachment=True)
 
     return redirect(url_for('index'))
@@ -183,7 +175,6 @@ def soumettre():
         flash("❌ Veuillez remplir tous les champs obligatoires (Nom, Téléphone, Chrono, Lien de l'activité).", "error")
         return redirect(url_for('index'))
 
-    # Traitement et hébergement de la photo sur ImgBB
     if 'photo_file' in request.files:
         file = request.files['photo_file']
         if file and file.filename != '' and allowed_file(file.filename):
@@ -191,7 +182,6 @@ def soumettre():
 
     try:
         sheet_mode = connexion_google_sheet("MODE_PHOTOS")
-        # Structure : Nom | Téléphone | Instagram | Distance | Chrono | Strava | Accord Strava | Photo URL | Conseil | Accord Conseil | Validé | Réponse Admin
         sheet_mode.append_row([nom, telephone, instagram, distance, chrono, strava, acc_strava, photo_url, conseil, acc_conseil, "NON", ""])
         flash("⏳ Merci ! Ta performance a été transmise pour validation.", "success")
     except Exception as e:
