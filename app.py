@@ -76,14 +76,14 @@ def connexion_google_sheet(onglet_name=None):
         try:
             return spreadsheet.worksheet(onglet_name)
         except Exception:
-            return spreadsheet.add_worksheet(title=onglet_name, rows=1000, cols=11)
+            return spreadsheet.add_worksheet(title=onglet_name, rows=1000, cols=12)
     return spreadsheet.sheet1
 
 @app.route('/')
 def index():
-    finishers_par_distance = {'10': [], '50': [], '100': []}
-    courageux_par_distance = {'10': None, '50': None, '100': None}
-    local_legend_par_distance = {'10': None, '50': None, '100': None}
+    finishers_par_distance = {'10': [], '50': [], '100': [], 'AR100': []}
+    courageux_par_distance = {'10': None, '50': None, '100': None, 'AR100': None}
+    local_legend_par_distance = {'10': None, '50': None, '100': None, 'AR100': None}
     belles_photos_choisies = []
     conseils_liste = []
 
@@ -111,7 +111,7 @@ def index():
                 if f.get('photo_url') and str(f.get('photo_url')).strip():
                     belles_photos_choisies.append(f)
 
-        for dist in ['10', '50', '100']:
+        for dist in ['10', '50', '100', 'AR100']:
             coureurs = finishers_par_distance[dist]
             if coureurs:
                 coureurs_tries = sorted(coureurs, key=lambda x: str(x.get('chrono', '')))
@@ -144,7 +144,9 @@ def telecharger_gpx(filename):
         '100K.gpx': '100 KM',
         '10k.gpx': '10 KM',
         '50k.gpx': '50 KM',
-        '100k.gpx': '100 KM'
+        '100k.gpx': '100 KM',
+        '50K(sans_Halatte).gpx': '50 KM (sans Halatte)',
+        '100K(sans_Halatte).gpx': '100 KM (sans Halatte)'
     }
 
     if filename in distance_map:
@@ -166,6 +168,7 @@ def telecharger_gpx(filename):
 def soumettre():
     nom = request.form.get('nom')
     telephone = request.form.get('telephone')
+    instagram = request.form.get('instagram', '').strip()
     distance = request.form.get('distance')
     chrono = request.form.get('chrono')
     strava = request.form.get('strava', '').strip()
@@ -188,8 +191,8 @@ def soumettre():
 
     try:
         sheet_mode = connexion_google_sheet("MODE_PHOTOS")
-        # Structure : Nom | Téléphone | Distance | Chrono | Strava | Accord Strava | Photo URL | Conseil | Accord Conseil | Validé | Réponse Admin
-        sheet_mode.append_row([nom, telephone, distance, chrono, strava, acc_strava, photo_url, conseil, acc_conseil, "NON", ""])
+        # Structure : Nom | Téléphone | Instagram | Distance | Chrono | Strava | Accord Strava | Photo URL | Conseil | Accord Conseil | Validé | Réponse Admin
+        sheet_mode.append_row([nom, telephone, instagram, distance, chrono, strava, acc_strava, photo_url, conseil, acc_conseil, "NON", ""])
         flash("⏳ Merci ! Ta performance a été transmise pour validation.", "success")
     except Exception as e:
         print(f"Erreur lors de l'enregistrement: {e}")
